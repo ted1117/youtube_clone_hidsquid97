@@ -5,10 +5,10 @@
 # 브랜치 구성
 
 - html
-  - 
+  - sample text
 - css_1
-  - 
+  - sample text
 - css_2
-  -
+  - sample text
 - js_1
-  -
+  - sample text
