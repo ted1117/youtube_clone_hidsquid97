@@ -9,7 +9,7 @@ xhr.onreadystatechange = function() {
 
             let print = '';
             // 태그 정리 필요
-            print += '<div>' + json.video_title;
+            print += '<p>' + json.video_title + '</p>';
             print += '<img src=' + json.image_link + '>';
             print += '<p>업로드 날짜: ' + json.upload_date + '</p>';
             print += '<p>채널이름: ' + json.video_channel + '</p>';
@@ -18,7 +18,6 @@ xhr.onreadystatechange = function() {
             print += '<p>id: ' + json.video_id + '</p>';
             print += '<p>tag: ' + json.video_tag + '</p>';
             print += '<p>views: ' + json.views + '</p>';
-            print += '</div>';
 
             // className 재정의, 위치 정리 필요, id로 하는 게 좋을까?
             document.querySelector('.item').innerHTML = print;
