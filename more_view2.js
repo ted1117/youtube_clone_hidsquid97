@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var wrap = document.querySelector("#wrap");
-    var moreButton = document.getElementById("moreButton");
+    var wrap = document.querySelector("#wrap2");
+    var moreButton = document.getElementById("moreButton2");
     var isExpanded = false
 
     // 초기에는 첫 2개의 항목만 보이도록 설정합니다.
     var items = wrap.getElementsByTagName("a");
     for (var i = 0; i < items.length; i++) {
-        if (i >= 6) {
+        if (i >= 4) {
             items[i].style.display = "none";
         }
     }
@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     moreButton.addEventListener("click", function () {
         event.preventDefault();
         if (isExpanded) {
-            for (var i = 6; i < items.length; i++) {
-                if (i < 9) {
+            for (var i = 4; i < items.length; i++) {
+                if (i < 7) {
                     items[i].style.display = "none"; // 또는 "block"으로 설정해도 됩니다.
                     isExpanded = false
                 } else {
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         else {
-            for (var i = 6; i < items.length; i++) {
-                if (i < 9) {
+            for (var i = 4; i < items.length; i++) {
+                if (i < 7) {
                     items[i].style.display = "flex"; // 또는 "block"으로 설정해도 됩니다.
                     isExpanded = true
                 } else {
