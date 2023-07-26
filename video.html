@@ -1,6 +1,5 @@
-<!-- main의 js부분 뺴고 뼈대 완성 -->
-
-
+<!-- 베너 쪽 하다가 끝남 -->
+<!-- 베너부터 완성하시면 될 것 같습니다 -->
 
 
 <!DOCTYPE html>
@@ -8,12 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="YT.css">
-    <script src="more_view.js"></script>
-    <title>Youtube_Clone</title>
+    <title>Document</title>
 </head>
 <body>
     <header class="navi">
@@ -64,13 +58,9 @@
                     <hr>
                 </div>
         
-                <div class="subscriptions" id="wrap2">
+                <div class="subscriptions">
                     <h3>SUBSCRIBED</h3>
                     <!-- js에서 받아오기??-->
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href="#" id="moreButton2"><img src="images/arrowBottom.svg"><p>Show More</p></a>
                     <a href=""><img src="images/"><p>NAME</p></a>
                     <a href=""><img src="images/"><p>NAME</p></a>
                     <a href=""><img src="images/"><p>NAME</p></a>
@@ -104,66 +94,18 @@
     </aside>
 
     <main>
-          <!--검색창 아래 옵션같은 버튼들 구현-->
-          <nav class="top-menu">
+        <div class="banner">
+            <img src="images/" class="banner">
+        </div>
+        <div>
+            <div style="float: left">
+                <img src="media/" />
+            </div>
             <div>
-                <button class="all">all</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-            </div>
-
-        </nav>
-        <div class="container-list">
-            <div class="item">
-                <img src="imges/" class="thumbnail">
-                <div class="item-info">
-                    <img src=""> <!--게시자 정보-->
-                    <div class="video-info"> <!--동영상 정보 불러오기-->
-                        <a href=""></a>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="imges/" class="thumbnail">
-                <div class="item-info">
-                    <img src=""> <!--게시자 정보-->
-                    <div class="video-info"> <!--동영상 정보 불러오기-->
-                        <a href=""></a>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="imges/" class="thumbnail">
-                <div class="item-info">
-                    <img src=""> <!--게시자 정보-->
-                    <div class="video-info"> <!--동영상 정보 불러오기-->
-                        <a href=""></a>
-                        <p></p>
-                    </div>
-                </div>
+                Oreumi
             </div>
         </div>
     </main>
+
 </body>
-<script src="./hamburger.js"></script>
-<script>
-    function toggleSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.classList.toggle("active");
-    }
-</script>
 </html>
