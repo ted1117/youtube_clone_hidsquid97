@@ -10,7 +10,6 @@ xhr.onreadystatechange = function() {
             let print = '';
             for (let id in json){
                 // 태그 정리 필요
-                print += '<div class="video-info>';
                 print += '<a>' + json[id].video_title; + '</a>';
                 print += '<p>업로드 날짜: ' + json[id].upload_date + '</p>';
                 print += '<p>채널이름: ' + json[id].video_channel + '</p>';
@@ -18,7 +17,6 @@ xhr.onreadystatechange = function() {
                 print += '<p>id: ' + json[id].video_id + '</p>';
                 print += '<p>tag: ' + json[id].video_tag + '</p>';
                 print += '<p>views: ' + json[id].views + '</p>';
-                print += '</div>'
             }
 
             // className 재정의, 위치 정리 필요, id로 하는 게 좋을까?
