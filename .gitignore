@@ -1,8 +1,0 @@
-*.css
-*.html
-*.ds
-
-.DS_Store
-._.DS_Store
-**/.DS_Store
-**/._.DS_Store
