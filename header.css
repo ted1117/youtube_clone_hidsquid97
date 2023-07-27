@@ -1,7 +1,7 @@
 /* Header */
 
 header {
-    background: var(--background-color, #212121);
+    background: #212121;
     display: flex;
     align-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ header {
 /* Image Attribute */
 .yt-button {
     display: flex;
-    background: var(--background-color, #212121);
+    background: #212121;
     border: 0px;
     padding: 18px 14px 18px 16px;
     gap: 10px;
@@ -33,27 +33,16 @@ header {
     height: 20px;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: flex;
-    padding: 8px;
-    margin: 8px;
-    align-items: flex-start;
-    gap: 10px;
-}
-
 /* 검색창 */
 .search-Box {
     /* 검색 div*/
     display: flex;
     margin: 0 auto;
     align-items: center;
-    justify-content: center;
-    width: 470px;
-    height: 40px;
+    justify-content: center; 
 }
 
-button {
+.search-Box button {
     /* 검색버튼*/
     background: #303030;
     display: flex;
@@ -65,31 +54,32 @@ button {
     border: 0px;
 }
 
-.search-icon {
+.search-Box .search-icon {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
     background: #303030;
 }
 
-input {
-    /* 검색창*/
-    border-radius: 2px 0px 0px 2px;
-    background: #121212;
-    width: 362px;
-    height: 34px;
-    flex-shrink: 0;
-    border: 0px;
-}
-
-.mic-icon {
+.search-Box .mic-icon {
     display: flex;
     padding: 8px;
     align-items: flex-start;
     gap: 10px;
     border-radius: 40px;
-    background: var(--black, #000);
+    background: #000;
     margin-left: 3px;
+}
+
+.search-Box input {
+    /* 검색창*/
+    border: 1px solid #303030;
+    border-radius: 2px 2px;
+    background: #121212;
+    width: 362px;
+    height: 34px;
+    flex-shrink: 0;
+    border: 0px;
 }
 
 /* profile */
