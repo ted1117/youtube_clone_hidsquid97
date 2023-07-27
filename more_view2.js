@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     var wrap = document.querySelector("#wrap2");
     var moreButton = document.getElementById("moreButton2");
+    var collButton = document.getElementById("collButton2");
+    var plIcons = document.querySelectorAll('.pl-icon');
+    var plIconCount = plIcons.length;
     var isExpanded = false
+
+    moreButton.querySelector('p').textContent = `Show ${plIconCount} more`;
 
     // 초기에는 첫 2개의 항목만 보이도록 설정합니다.
     var items = wrap.getElementsByTagName("a");
@@ -14,25 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // 더보기 버튼 클릭 시 다음 3개의 항목을 보여줍니다.
     moreButton.addEventListener("click", function () {
         event.preventDefault();
-        if (isExpanded) {
+        if (!isExpanded) {
+            collButton.style.display = "flex";
+            moreButton.style.display = "none";
             for (var i = 4; i < items.length; i++) {
-                if (i < 7) {
-                    items[i].style.display = "none"; // 또는 "block"으로 설정해도 됩니다.
-                    isExpanded = false
-                } else {
-                    break; // 추가적인 항목이 없으면 더 이상 숨길 필요가 없으므로 반복문을 종료합니다.
-                }
-            }
-        }
-        else {
-            for (var i = 4; i < items.length; i++) {
-                if (i < 7) {
-                    items[i].style.display = "flex"; // 또는 "block"으로 설정해도 됩니다.
-                    isExpanded = true
-                } else {
-                    break; // 추가적인 항목이 없으면 더 이상 숨길 필요가 없으므로 반복문을 종료합니다.
-                }
+                items[i].style.display = "flex"; // 또는 "block"으로 설정해도 됩니다.
+                isExpanded = true
             }
         }
     });
+
+    collButton.addEventListener("click", function () {
+        event.preventDefault();
+        if (isExpanded) {
+            moreButton.style.display = "flex";
+            collButton.style.display = "none";
+            for (var i = 4; i < items.length; i++) {
+                items[i].style.display = "none"; // 또는 "block"으로 설정해도 됩니다.
+                isExpanded = false
+            }
+        }
+    })
 });
