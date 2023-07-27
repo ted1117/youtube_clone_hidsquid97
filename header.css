@@ -1,0 +1,93 @@
+/* Header */
+
+header {
+    background: var(--background-color, #212121);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+}
+
+/* Image Attribute */
+.yt-button {
+    display: flex;
+    background: var(--background-color, #212121);
+    border: 0px;
+    padding: 18px 14px 18px 16px;
+    gap: 10px;
+}
+
+/* Youtube Logo */
+.yt-button img {
+    width: 90px;
+    height: 20px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    padding: 8px;
+    margin: 8px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* 검색창 */
+.search-Box {
+    /* 검색 div*/
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 470px;
+    height: 40px;
+}
+
+button {
+    /* 검색버튼*/
+    background: #303030;
+    display: flex;
+    width: 50px;
+    height: 36px;
+    padding: 6px 13px;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: #303030;
+}
+
+input {
+    /* 검색창*/
+    border-radius: 2px 0px 0px 2px;
+    background: #121212;
+    width: 362px;
+    height: 34px;
+    flex-shrink: 0;
+    border: 0px;
+}
+
+.mic-icon {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 40px;
+    background: var(--black, #000);
+    margin-left: 3px;
+}
+
+/* profile */
+.profile img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    padding: 8px;
+    gap: 10px;
+}
