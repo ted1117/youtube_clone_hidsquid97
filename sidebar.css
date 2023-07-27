@@ -1,0 +1,75 @@
+/* Sidebar */
+
+.sidebar {
+    background: #212121;
+    color: #f1f1f1;
+    float: left;
+    width: 240px;
+    height: 100vh;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+}
+.top a:first-child{
+    margin-top: 10px;
+}
+.sidebar a {
+    color: #fff;
+    display: flex;
+    padding: 5%;
+    padding-left: 10%;
+    text-decoration-line: none;
+}
+
+.sidebar a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+.sidebar hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #303030;
+}
+
+.subscriptions h3 {
+    padding-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* 햄버거 활성화시 이상하다 수정필요 */
+.active {
+    width: 80px;
+    display: block;
+}
+.active .gone-menu {
+    display: none;
+}
+.active a {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*  */
+.pl-icon img {
+    filter: invert(100%);
+}
+
+
+/*  */
+.sidebar a:hover {
+    background: #303030;
+}
+
+.sidebar a:focus {
+    background: #303030;
+}
