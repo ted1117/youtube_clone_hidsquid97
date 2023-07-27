@@ -5,32 +5,37 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="header.css">
-    <script src="more_view.js"></script>
-    <script src="more_view2.js"></script>
+
     <title>Youtube_Clone</title>
 </head>
+
 <body>
     <header class="navi">
         <div class="hamburger" onclick="toggleSidebar()">
             <img src="images/hamburger.svg">
-        </div> 
+        </div>
         <div class="yt-button">
-            <img src="images/Youtube-Logo.svg" class="Logo">
+            <img src="images/Youtube-Logo.svg">
         </div>
 
         <div class="search-Box">
             <input type="text" placeholder="Search">
-                <button>
-                    <img src="images/search.svg" class="search-icon">
-                </button>
+            <button>
+                <img src="images/search.svg" class="search-icon">
+            </button>
             <img src="images/mic.svg" class="mic-icon">
         </div>
 
@@ -42,130 +47,210 @@
         </div>
     </header>
 
-<div class="container">
-    <aside>
-        <div class="sidebar">
-            <div class="menu">
-                <div class="top">
-                    <a href="" class="small-menu"><img src="images/home-fill.svg"><p>Home</p></a>
-                    <a href="" class="small-menu"><img src="images/explore.svg"><p>Explore</p></a>
-                    <a href="" class="small-menu"><img src="images/subscriptions.svg"><p>Subscriptions</p></a>
-                    <hr class="gone-menu">
-                </div>
-        
-                <div class="top-2" id="wrap">
-                    <a href="" class="small-menu"><img src="images/library.svg"><p>Library</p></a>
-                    <a href="" class="small-menu"><img src="images/history.svg"><p>History</p></a>
-                    <a href="" class="gone-menu"><img src="images/yourVideos.svg"><p>Your Videos</p></a>
-                    <a href="" class="gone-menu"><img src="images/watchLater.svg"><p>Watch Later</p></a>
-                    <a href="" class="gone-menu"><img src="images/liked.svg"><p>Liked Videos</p></a>
-                    <a href="#" id="moreButton"><img src="images/arrowBottom.svg"><p>Show More</p></a>
-                    <a href=""><img src="images/playlist_play.svg"><p>나도코딩</p></a>
-                    <a href=""><img src="images/playlist_play.svg"><p>드림코딩</p></a>
-                    <a href=""><img src="images/playlist_play.svg"><p>전쓰트의 게임채널</p></a>
-                    <hr>
-                </div>
-        
-                <div class="subscriptions" id="wrap2">
-                    <h3>SUBSCRIBED</h3>
-                    <!-- js에서 받아오기??-->
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href="#" id="moreButton2"><img src="images/arrowBottom.svg"><p>Show More</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <a href=""><img src="images/"><p>NAME</p></a>
-                    <hr>
-                </div>
-        
-                <div class="more-from">
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <hr>
-                </div>
-        
-                <div class="bottom">
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <hr>
-                </div>
-        
-                <div class="footer">
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                    <a href=""><img src=""></a>
-                </div>
-            </div>
-        </div>
-    </aside>
+    <div class="wrap">
+        <aside>
+            <div class="sidebar">
+                <div class="menu">
+                    <div class="top">
+                        <a href=""><img src="images/home-fill.svg">
+                            <p>Home</p>
+                        </a>
+                        <a href=""><img src="images/explore.svg">
+                            <p>Explore</p>
+                        </a>
+                        <a href=""><img src="images/subscriptions.svg">
+                            <p>Subscriptions</p>
+                        </a>
+                        <hr class="gone-menu">
+                    </div>
 
-    <main>
-          <!--검색창 아래 옵션같은 버튼들 구현-->
-          <nav class="top-menu">
-            <div>
-                <button class="all">all</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-                <button>Item</button>
-            </div>
+                    <div class="top" id="wrap">
+                        <a href=""><img src="images/library.svg">
+                            <p>Library</p>
+                        </a>
+                        <a href=""><img src="images/history.svg">
+                            <p>History</p>
+                        </a>
+                        <a href="" class="gone-menu"><img src="images/yourVideos.svg">
+                            <p>Your Videos</p>
+                        </a>
+                        <a href="" class="gone-menu"><img src="images/watchLater.svg">
+                            <p>Watch Later</p>
+                        </a>
+                        <a href="" class="gone-menu"><img src="images/liked.svg">
+                            <p>Liked Videos</p>
+                        </a>
+                        <a href="#" id="moreButton gone-menu"><img src="images/arrowBottom.svg">
+                            <p>Show More</p>
+                        </a>
+                        <a href=""><img src="images/playlist_play.svg">
+                            <p>나도코딩</p>
+                        </a>
+                        <a href=""><img src="images/playlist_play.svg">
+                            <p>드림코딩</p>
+                        </a>
+                        <a href=""><img src="images/playlist_play.svg">
+                            <p>전쓰트의 게임채널</p>
+                        </a>
+                        <a href="#" id="collButton"><img src="images/expand_less.svg">
+                            <p>Collapse</p>
+                        </a>
+                        <hr class="gone-menu">
+                    </div>
 
-        </nav>
-        <div class="container-list">
-            <div class="item">
-                <img src="imges/" class="thumbnail">
-                <div class="item-info">
-                    <img src=""> <!--게시자 정보-->
-                    <div class="video-info"> <!--동영상 정보 불러오기-->
-                        <a href=""></a>
-                        <p></p>
+                    <div class="subscriptions gone-menu">
+                        <h3>SUBSCRIBED</h3>
+                        <!-- js에서 받아오기??-->
+                        <a href=""><img src="images/">
+                            <p>NAME</p>
+                        </a>
+                        <a href=""><img src="images/">
+                            <p>NAME</p>
+                        </a>
+                        <a href=""><img src="images/">
+                            <p>NAME</p>
+                        </a>
+                        <a href="#" id="moreButton2"><img src="images/arrowBottom.svg">
+                            <p>Show More</p>
+                        </a>
+                        <a href=""><img src="images/">
+                            <p>NAME</p>
+                        </a>
+                        <a href=""><img src="images/">
+                            <p>NAME</p>
+                        </a>
+                        <a href=""><img src="images/">
+                            <p>NAME</p>
+                        </a>
+                        <a href="#" id="collButton2"><img src="images/expand_less.svg">
+                            <p>Collapse</p>
+                        </a>
+                        <hr>
+                    </div>
+
+                    <div class="more-from gone-menu">
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <hr>
+                    </div>
+
+                    <div class="bottom gone-menu">
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <hr>
+                    </div>
+
+                    <div class="footer gone-menu">
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
+                        <a href=""><img src=""></a>
                     </div>
                 </div>
             </div>
+        </aside>
 
-            <div class="item">
-                <img src="imges/" class="thumbnail">
-                <div class="item-info">
-                    <img src=""> <!--게시자 정보-->
-                    <div class="video-info"> <!--동영상 정보 불러오기-->
-                        <a href=""></a>
-                        <p></p>
+        <section>
+            <!--검색창 아래 옵션같은 버튼들 구현-->
+            <nav class="top-menu">
+
+                <div>
+                    <button>all</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                    <button>Item</button>
+                </div>
+
+            </nav>
+            <div class="container container-list">
+                <div class="item">
+                    <img src="images/image 1.svg" class="thumbnail">
+                    <div class="item-info">
+                        <img src=""> <!--게시자 정보-->
+                        <div class="video-info"> <!--동영상 정보 불러오기-->
+                            <a href=""></a>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="item">
-                <img src="imges/" class="thumbnail">
-                <div class="item-info">
-                    <img src=""> <!--게시자 정보-->
-                    <div class="video-info"> <!--동영상 정보 불러오기-->
-                        <a href=""></a>
-                        <p></p>
+
+                <div class="item">
+                    <img src="images/image 1.svg" class="thumbnail">
+                    <div class="item-info">
+                        <img src=""> <!--게시자 정보-->
+                        <div class="video-info"> <!--동영상 정보 불러오기-->
+                            <a href=""></a>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
+
+
+                <div class="item">
+                    <img src="images/image 1.svg" class="thumbnail">
+                    <div class="item-info">
+                        <img src=""> <!--게시자 정보-->
+                        <div class="video-info"> <!--동영상 정보 불러오기-->
+                            <a href=""></a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/image 1.svg" class="thumbnail">
+                    <div class="item-info">
+                        <img src=""> <!--게시자 정보-->
+                        <div class="video-info"> <!--동영상 정보 불러오기-->
+                            <a href=""></a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/image 1.svg" class="thumbnail">
+                    <div class="item-info">
+                        <img src=""> <!--게시자 정보-->
+                        <div class="video-info"> <!--동영상 정보 불러오기-->
+                            <a href=""></a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/image 1.svg" class="thumbnail">
+                    <div class="item-info">
+                        <img src=""> <!--게시자 정보-->
+                        <div class="video-info"> <!--동영상 정보 불러오기-->
+                            <a href=""></a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
-        </div>
-    </main>
+    </div>
+    </section>
+    </div>
 </body>
-<script src="./hamburger.js"></script>
-<script>
-    function toggleSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.classList.toggle("active");
-    }
-</script>
-</html>.
+<script src="hamburger.js"></script>
+<script src="more_view.js"></script>
+<script src="more_view2.js"></script>
+</html>
