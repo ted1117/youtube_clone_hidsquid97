@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             collButton.style.display = "flex";
             moreButton.style.display = "none";
             for (var i = 4; i < items.length; i++) {
-                items[i].style.display = "flex"; // 또는 "block"으로 설정해도 됩니다.
+                items[i].style.display = "flex";
                 isExpanded = true
             }
         }
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             moreButton.style.display = "flex";
             collButton.style.display = "none";
             for (var i = 4; i < items.length; i++) {
-                items[i].style.display = "none"; // 또는 "block"으로 설정해도 됩니다.
+                items[i].style.display = "none";
                 isExpanded = false
             }
         }
