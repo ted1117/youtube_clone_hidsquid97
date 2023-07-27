@@ -1,0 +1,68 @@
+/* Main Page */
+
+body {
+    background:#212121;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* nav */
+nav {
+    display: flex;
+    flex-grow: 1;
+    width: 1440px;
+    height: 3%;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #212121;
+}
+
+nav button {
+    /* Layout */
+    display: inline-flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    /* Style */
+    border-radius: 32px;
+    border: 0.3px solid var(--gray-color, #AAA);
+    background: var(--border-color, #303030);
+
+    /* Font */
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+nav button:hover {
+    background-color: #000;
+}
+
+nav button:focus {
+    background-color: white;
+    color: #303030;
+}
+
+/* Sidebar + main */
+.container {
+    display: flex;
+    background-color: black;
+}
+
+/* nav + container-list */
+.main {
+    flex: 1;
+}
+
+/* Video List */
+.container-list {
+    display: flex;
+}
+
+
