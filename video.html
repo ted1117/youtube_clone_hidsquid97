@@ -7,7 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="more_view.js"></script>
+    <script src="more_view2.js"></script>
+    <title>Video page</title>
 </head>
 <body>
     <header class="navi">
@@ -30,7 +37,7 @@
             <img src="images/create.svg">
             <img src="images/apps.svg">
             <img src="images/notifications.svg">
-            <img src="images/User-Avatar.svg">
+            <img src="images/User-Avatar.png">
         </div>
     </header>
 
@@ -52,15 +59,19 @@
                     <a href="" class="gone-menu"><img src="images/watchLater.svg"><p>Watch Later</p></a>
                     <a href="" class="gone-menu"><img src="images/liked.svg"><p>Liked Videos</p></a>
                     <a href="#" id="moreButton"><img src="images/arrowBottom.svg"><p>Show More</p></a>
-                    <a href=""><img src="images/playlist_play.svg"><p>나도코딩</p></a>
-                    <a href=""><img src="images/playlist_play.svg"><p>드림코딩</p></a>
-                    <a href=""><img src="images/playlist_play.svg"><p>전쓰트의 게임채널</p></a>
+                    <a href=""><img class="pl-icon" src="images/playlist_play.svg"><p>나도코딩</p></a>
+                    <a href=""><img class="pl-icon" src="images/playlist_play.svg"><p>드림코딩</p></a>
+                    <a href=""><img class="pl-icon" src="images/playlist_play.svg"><p>전쓰트의 게임채널</p></a>
                     <hr>
                 </div>
         
-                <div class="subscriptions">
+                <div class="subscriptions" id="wrap2">
                     <h3>SUBSCRIBED</h3>
                     <!-- js에서 받아오기??-->
+                    <a href=""><img src="images/"><p>NAME</p></a>
+                    <a href=""><img src="images/"><p>NAME</p></a>
+                    <a href=""><img src="images/"><p>NAME</p></a>
+                    <a href="#" id="moreButton2"><img src="images/arrowBottom.svg"><p>Show More</p></a>
                     <a href=""><img src="images/"><p>NAME</p></a>
                     <a href=""><img src="images/"><p>NAME</p></a>
                     <a href=""><img src="images/"><p>NAME</p></a>
@@ -95,12 +106,8 @@
 
     <main>
         <div class="banner">
-            <img src="images/" class="banner">
+            <img src="Video/image_2.png" alt="image_2" class="channel_cover">
         </div>
-        <div>
-            <div style="float: left">
-                <img src="media/" />
-            </div>
             <div>
                 Oreumi
             </div>
