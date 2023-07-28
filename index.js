@@ -2,7 +2,6 @@ function createVideoItem(video_id) {
     // XMLHttpRequest 객체 생성
     let xhr = new XMLHttpRequest();
   
-  
     // API 요청 설정
     let apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${video_id}`;
     xhr.open("GET", apiUrl, true);
@@ -58,7 +57,6 @@ function createVideoItem(video_id) {
                 videoInfoDiv.appendChild(linkB);
                 videoInfoDiv.appendChild(pTag);
                 itemInfoDiv.appendChild(videoInfoDiv);
-                itemDiv.appendChild(itemLink);
                 itemDiv.appendChild(thumbnailImg);
                 itemDiv.appendChild(itemInfoDiv);
                 containerList.appendChild(itemDiv);
