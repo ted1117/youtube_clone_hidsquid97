@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     var wrap = document.querySelector("#wrap");
-    var moreButton = document.getElementById("moreButton");
+    var moreButton = document.getElementById("moreButton gone-menu");
     var isExpanded = false
 
     // 초기에는 첫 2개의 항목만 보이도록 설정합니다.
