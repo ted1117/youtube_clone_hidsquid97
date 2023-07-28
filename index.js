@@ -27,8 +27,12 @@ function createVideoItem(video_id) {
 
                 const containerList = document.getElementById("video-list");
 
-                const itemDiv = document.createElement("div");
-                itemDiv.classList.add("item");
+                const item = document.createElement("div");
+                item.classList.add("item");
+
+                // <a href="video.html?id=123">Watch Video</a>
+                const itemDiv = document.createElement("a");
+                itemDiv.setAttribute("href", `video.html?id=${video_id}`);
 
                 const thumbnailImg = document.createElement("img");
                 thumbnailImg.setAttribute("src", response.image_link);
@@ -57,9 +61,11 @@ function createVideoItem(video_id) {
                 videoInfoDiv.appendChild(linkB);
                 videoInfoDiv.appendChild(pTag);
                 itemInfoDiv.appendChild(videoInfoDiv);
+                // itemDiv.appendChild(itemDiv);
                 itemDiv.appendChild(thumbnailImg);
                 itemDiv.appendChild(itemInfoDiv);
-                containerList.appendChild(itemDiv);
+                item.appendChild(itemDiv);
+                containerList.appendChild(item);
 
                 // 다음 video_id로 재귀 호출
                 createVideoItem(video_id + 1);
