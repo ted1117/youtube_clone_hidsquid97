@@ -1,8 +1,4 @@
 <!-- main의 js부분 뺴고 뼈대 완성 -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +28,9 @@
         </div>
 
         <div class="search-Box">
-            <input type="text" placeholder="Search">
+            <div class="search-border">
+                <input type="text" placeholder="Search">
+            </div>
             <button>
                 <img src="images/search.svg" class="search-icon">
             </button>
@@ -98,9 +96,8 @@
                         <hr class="gone-menu">
                     </div>
 
-                    <div class="subscriptions gone-menu">
-                        <h3>SUBSCRIBED</h3>
-                        <!-- js에서 받아오기??-->
+                    <div class="subscriptions gone-menu" id="wrap2">
+                        <h3>SUBSCRIPTIONS</h3>
                         <a href=""><img src="images/">
                             <p>NAME</p>
                         </a>
@@ -113,13 +110,13 @@
                         <a href="#" id="moreButton2"><img src="images/arrowBottom.svg">
                             <p>Show More</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href="" class="pl-icon"><img src="images/">
                             <p>NAME</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href="" class="pl-icon"><img src="images/">
                             <p>NAME</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href="" class="pl-icon"><img src="images/">
                             <p>NAME</p>
                         </a>
                         <a href="#" id="collButton2"><img src="images/expand_less.svg">
@@ -175,82 +172,16 @@
                 </div>
 
             </nav>
-            <div class="container container-list">
-                <div class="item">
-                    <img src="images/image 1.svg" class="thumbnail">
-                    <div class="item-info">
-                        <img src=""> <!--게시자 정보-->
-                        <div class="video-info"> <!--동영상 정보 불러오기-->
-                            <a href=""></a>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="item">
-                    <img src="images/image 1.svg" class="thumbnail">
-                    <div class="item-info">
-                        <img src=""> <!--게시자 정보-->
-                        <div class="video-info"> <!--동영상 정보 불러오기-->
-                            <a href=""></a>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="item">
-                    <img src="images/image 1.svg" class="thumbnail">
-                    <div class="item-info">
-                        <img src=""> <!--게시자 정보-->
-                        <div class="video-info"> <!--동영상 정보 불러오기-->
-                            <a href=""></a>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/image 1.svg" class="thumbnail">
-                    <div class="item-info">
-                        <img src=""> <!--게시자 정보-->
-                        <div class="video-info"> <!--동영상 정보 불러오기-->
-                            <a href=""></a>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/image 1.svg" class="thumbnail">
-                    <div class="item-info">
-                        <img src=""> <!--게시자 정보-->
-                        <div class="video-info"> <!--동영상 정보 불러오기-->
-                            <a href=""></a>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/image 1.svg" class="thumbnail">
-                    <div class="item-info">
-                        <img src=""> <!--게시자 정보-->
-                        <div class="video-info"> <!--동영상 정보 불러오기-->
-                            <a href=""></a>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-                
+            <div class="container container-list" id="video-list">
+                <!-- 동영상 정보 불러오기 -->
             </div>
-    </div>
-    </section>
+
+        </section>
     </div>
 </body>
 <script src="hamburger.js"></script>
 <script src="more_view.js"></script>
 <script src="more_view2.js"></script>
+<script src="index.js"></script>
+
 </html>
