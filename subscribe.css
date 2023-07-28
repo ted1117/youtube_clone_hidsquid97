@@ -1,0 +1,57 @@
+.buttoncon {
+    position: relative;
+    cursor: pointer;
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+
+}
+
+.bellsvg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+#sub {
+    margin: 0;
+    font-size: 14px;
+}
+
+.custom-select {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: none;
+}
+
+.selected-option {
+    padding: 8px;
+}
+
+.options {
+    display: none;
+}
+
+.option {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f1f1f1;
+}
+
+.buttoncon.clicked {
+    background-color: #000;
+}
+
+.bellsvg {
+    fill: white;
+   
+}

@@ -67,3 +67,17 @@ section {
     grid-row-gap: 30px;
     margin-top: 15px;   
 }
+
+.search-border{
+  border: 2px solid rgb(51, 49, 49);
+  display: flex;
+}
+
+
+/* item과 버튼이 겹치게 설정 */
+.button Nextbutton{
+    width:20px;
+    height:20px;
+    z-index:5px;
+    right:70px; 
+}
