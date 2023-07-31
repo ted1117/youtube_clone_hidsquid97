@@ -1,7 +1,7 @@
 function createVideoItem(video_id) {
     // XMLHttpRequest 객체 생성
     let xhr = new XMLHttpRequest();
-  
+
     // API 요청 설정
     let apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${video_id}`;
     xhr.open("GET", apiUrl, true);
@@ -55,7 +55,8 @@ function createVideoItem(video_id) {
 
                 //  조회수 + 업로드 일자
                 const pTag = document.createElement("p");
-                pTag.innerText = response.views + " Views. " + response.upload_date;
+                // pTag.innerText = response.views + " Views. " + response.upload_date;
+                pTag.innerText = adjustUnit(response.views) + " Views. " + calcDateDiff(response.upload_date);
 
                 videoInfoDiv.appendChild(linkA);
                 videoInfoDiv.appendChild(linkB);
@@ -75,6 +76,41 @@ function createVideoItem(video_id) {
 
     // 요청 전송
     xhr.send();
+}
+
+function adjustUnit(views) {
+    if (views > 10000) {
+        return (views / 10000).toFixed(1) + "M";
+    } else if (views > 1000) {
+        return (views / 1000).toFixed(1) + "K";
+    } else {
+        return views;
+    }
+}
+
+function calcDateDiff(date) {
+    const inputDate = new Date(date);
+    const currentDate = new Date();
+
+    // 두 날짜의 차이 (ms)
+    const msDiff = currentDate - inputDate;
+
+    // 두 날짜의 차이 (일)
+    const daysDiff = msDiff / (1000 * 60 * 60 * 24);
+
+    // 날짜 계산
+    if (daysDiff >= 365) {
+        const yearsDiff = Math.floor(daysDiff / 365);
+        return `${yearsDiff}년 전`;
+    } else if (daysDiff >= 30) {
+        const monthsDiff = Math.floor(daysDiff / 30);
+        return `${monthsDiff}달 전`;
+    } else if (daysDiff >= 7) {
+        const weeksDiff = Math.floor(daysDiff / 7);
+        return `${weeksDiff}주 전`;
+    } else {
+        return `${Math.floor(daysDiff)}일 전`;
+    }
 }
 
 // id = 0부터 아이템 불러오기
