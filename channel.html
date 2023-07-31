@@ -14,363 +14,10 @@
     <link rel="stylesheet" href="header.css">
     <title>Youtube_Clone_Channel</title>
 </head>
-<style>
-    /* channel.css에 아래 문구가 있으니 삭제해도 무방합니다. */
-    body {
-        background: #212121;
-    }
-
-    main {
-        background-color: #000000;
-        flex: 1;
-        padding-top: 64px;
-        overflow-y: auto;
-    }
-
-    /* Banner */
-    /* .banner {
-        display: flex;
-        width: 1200px;
-        height: 192px;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-    }
-
-    .banner img {
-        width: 1200px;
-        height: 192px;
-        flex-shrink: 0;
-    } */
-
-    /* Channel Title */
-    .channelTitle {
-        background-color: #181818;
-        display: flex;
-        padding: 16px 65px 4px 65px;
-        align-items: flex-start;
-        gap: 60%;
-    }
-
-    .channelProfile {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .channelProfileName {
-        display: flex;
-        flex-direction: column;
-        display: flex;
-        padding: 18px 0px;
-        align-items: flex-start;
-    }
-
-    .channelProfilePic {
-        width: 104px;
-        display: flex;
-        padding-right: 0px;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .profileImg {
-        display: flex;
-        width: 80px;
-        height: 80px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #channelName {
-        color: var(--white-color, #FFF);
-        font-family: Roboto;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    #subscribers {
-        color: var(--gray-color, #AAA);
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    .subscribeBtnCls {
-        display: flex;
-        width: 124px;
-        padding: 22px 4px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    #subscribeBtn {
-        display: flex;
-        padding: 10px 16px;
-        align-items: flex-start;
-        gap: 10px;
-
-        border-radius: 2px;
-        background: #C00;
-
-        /* Font Attributes */
-        color: var(--white-color, #FFF);
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
-    }
-
-    /* Channel Toolbar */
-    .channelToolbar {
-        background-color: #181818;
-        display: flex;
-        padding: 0px 65px;
-        align-items: flex-start;
-    }
-
-    .toolbars {
-        /* Layout */
-        display: flex;
-        padding: 16px 32px 15px 32px;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 10px;
-        color: var(--white-color, #FFF);
-        /* Fonts Attribute */
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
-    }
-
-    .toolbarSearch {
-        display: flex;
-        padding-left: 0px;
-        align-items: flex-start;
-        gap: 202px;
-    }
-
-    /* Small Video */
-    .smallVideo {
-        display: flex;
-        padding: 24px 287px 24px 65px;
-        align-items: flex-start;
-    }
-
-    .player {
-        display: flex;
-        padding-right: 24px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .videoDesc {
-        background-color: #000000;
-        display: flex;
-        padding-bottom: 88px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .videoTitle {
-        display: flex;
-        padding-bottom: 19px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #title {
-        /* Layout */
-        display: flex;
-        padding-bottom: 20px;
-        align-items: flex-start;
-        gap: 10px;
-        /* Fonts */
-        color: var(--white-color, #FFF);
-        font-variant-numeric: stacked-fractions;
-        font-feature-settings: 'hlig' on, 'dlig' on;
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.14px;
-    }
-
-    #time {
-        /* padding-bottom: 19px; */
-        color: var(--gray-color, #AAA);
-        font-family: Roboto;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    #description {
-        /* Layout */
-        display: flex;
-        width: 400px;
-        height: 80px;
-        justify-content: center;
-        align-items: center;
-        /* Font Attributes */
-        color: var(--white-color, #FFF);
-        font-variant-numeric: stacked-fractions;
-        font-feature-settings: 'hlig' on, 'dlig' on;
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 0.14px;
-    }
-
-    /* Playlist */
-    .playlistContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .playList {
-        display: flex;
-        padding: 0px 65px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .playlistHeader {
-        display: flex;
-        padding-top: 8px;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .playBtn {
-        display: flex;
-        padding: 6px 16px;
-        align-items: flex-start;
-        flex-direction: row;
-    }
-
-    .playBtn img {
-        display: flex;
-        width: 12px;
-        height: 16px;
-        border: 4px 6px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .playBtn p {
-        /* Layout */
-        display: flex;
-        padding: 3px 0px 2px 8px;
-        align-items: flex-start;
-        gap: 10px;
-
-        /* Font Attribute */
-        color: var(--gray-color, #AAA);
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
-    }
-
-    .contentsList {
-        display: flex;
-        padding: 24px 0px;
-        align-items: flex-start;
-    }
-
-    .playlistVideo {
-        display: flex;
-        width: 214px;
-        padding-right: 4px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .playThumbnail {
-        width: 210px;
-        height: 118px;
-    }
-
-    .playlistDesc {
-        display: flex;
-        width: 186px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .plVideoName {
-        /* Layout */
-        display: flex;
-        padding: 8px 0px;
-        align-items: flex-start;
-        gap: 10px;
-        /* Font Attributes */
-        color: var(--white-color, #FFF);
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    .plVideoInfo {
-        color: var(--gray-color, #AAA);
-        font-family: Roboto;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    /* aside와 main을 가로로 배열하기 위한 컨테이너 스타일 */
-    .wrap {
-        display: flex;
-        /* overflow-y: auto;  */
-        position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
-    /* aside 영역 스타일 */
-    aside {
-        overflow-y: auto;
-    }
-</style>
 
 <body>
-    <header>
-        <div class="hamburger" onclick="toggleSidebar()">
+    <header class="navi">
+        <div class="hamburger">
             <img src="images/hamburger.svg">
         </div>
         <div class="yt-button">
@@ -394,6 +41,7 @@
             <img src="images/User-Avatar.svg">
         </div>
     </header>
+
     <div class="wrap">
         <aside>
             <div class="sidebar">
@@ -445,28 +93,27 @@
                         <hr class="gone-menu">
                     </div>
 
-                    <div class="subscriptions gone-menu">
+                    <div class="subscriptions gone-menu" id="wrap2">
                         <h3>SUBSCRIPTIONS</h3>
-                        <!-- js에서 받아오기??-->
-                        <a href=""><img src="images/">
+                        <a href=""><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href=""><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href=""><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
                         <a href="#" id="moreButton2"><img src="images/arrowBottom.svg">
                             <p>Show More</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href="" class="pl-icon"><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href="" class="pl-icon"><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
-                        <a href=""><img src="images/">
+                        <a href="" class="pl-icon"><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
                         <a href="#" id="collButton2"><img src="images/expand_less.svg">
@@ -500,35 +147,47 @@
                 </div>
             </div>
         </aside>
+
         <!-- 테스트 용 배경 색상(grey) -->
         <main>
             <!-- Channel Cover -->
             <div class="banner">
-                <img src="images/image .png">
+                <img src="images/image 2.png">
             </div>
             <div class="channelTitle">
                 <div class="channelProfile">
                     <div class="channelProfilePic">
-                        <img src="thumbnail_img/User-Avatar.svg" class="profileImg">
+                        <img src="images/User-Avatar.svg" class="profileImg">
                     </div>
                     <div class="channelProfileName">
                         <span id="channelName">Marcus Levin</span>
                         <span id="subscribers">1.2M subscribers</span>
                     </div>
                 </div>
-                <div class="subscribeBtnCls">
-                    <button id="subscribeBtn">SUBSCRIBES</button>
-                </div>
+                <button type="button" class="buttoncon">
+                    <a onclick="changeImg()" id="sub">SUBSCRIBES</a>
+                        <!-- <button>
+                            <div id="selectContainer">
+                                <select id="options" style="display: none;">
+                                    <option value="all">전체</option>
+                                    <option value="custom">맞춤설정</option>
+                                    <option value="none">없음</option>
+                                    <option value="cancel">구독취소</option>
+                                </select>
+                            </div>
+                        </button>
+                    </div> -->
+                </button>
             </div>
             <!--Channel Toolbar-->
             <div class="channelToolbar">
                 <div class="toolbars">
-                    <div class="toolbarMenu"><a>HOME</a></div>
-                    <div class="toolbarMenu"><a>VIDEOS</a></div>
-                    <div class="toolbarMenu"><a>PLAYLIST</a></div>
-                    <div class="toolbarMenu"><a>COMMUNITY</a></div>
-                    <div class="toolbarMenu"><a>CHANNELS</a></div>
-                    <div class="toolbarMenu"><a>ABOUT</a></div>
+                    <a class="toolbarMenu"><p>HOME</p></a>
+                    <a class="toolbarMenu"><p>VIDEOS</p></a>
+                    <a class="toolbarMenu"><p>PLAYLIST</p></a>
+                    <a class="toolbarMenu"><p>COMMUNITY</p></a>
+                    <a class="toolbarMenu"><p>CHANNELS</p></a>
+                    <a class="toolbarMenu"><p>ABOUT</p></a>
                 </div>
                 <div class="toolbarSearch">
                     <a href="#">
@@ -551,14 +210,11 @@
                 </div>
                 <div class="videoDesc">
                     <div class="videoTitle">
-                        <!-- <div id="title">
-                                <span></span>
-                            </div> -->
                         <span id="title">
                             (영상제목)Blind Woodturner: Turning passion into fine art
                         </span>
                         <span id="time">
-                            576,969 views . 3 weeks ago
+                            576,969 views &bull; 3 weeks ago
                         </span>
                     </div>
                     <span id="description">
@@ -676,5 +332,6 @@
 <script src="hamburger.js"></script>
 <script src="more_view.js"></script>
 <script src="more_view2.js"></script>
+<script src="subcribe.js"></script>
 
 </html>
