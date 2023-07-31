@@ -52,12 +52,14 @@
         <!-- 비디오 재생 창 (댓글 포함) -->
         <div class="primary">
             <!-- 영상 재생 부분 -->
-            <div class="videoPlayer">
-                <!-- videoPlayer기준으로 비디오 불러옴 -->
+            <div class="youtubePlayer">
+
+                <div class=" videoPlayer">
+                    <!-- videoPlayer기준으로 비디오 불러옴 -->
+                </div>
                 <!-- 태그 넣기 -->
                 <div class="tags">
                 </div>
-                <div class="youtubePlayer"></div>
                 <!-- 영상 제목 + 조회수 + 날짜 + 좋아요 + 싫어요 + 공유 + 재생목록 저장 -->
                 <div class="videoInfoContainer">
                     <span id="videoTitle">(영상제목)Blind Woodturner: Turning passion into fine art</span>
@@ -68,7 +70,7 @@
                             <a href=""><img src="images/DisLiked.svg" alt="">싫어요</a>
                             <a href=""><img src="images/Share.svg" alt="">SHARE</a>
                             <a href=""><img src="images/Save.svg" alt="">SAVE</a>
-                            <a href=""><img src="images/More.svg" alt="">더보기</a>
+                            <a href=""><img src="images/More.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -84,20 +86,20 @@
                     </a>
                         <span id="subscribers">(구독자수)1.2M subscribers</span>
                     
-                    <button type="button" class="buttoncon">
-                        <a onclick="changeImg()" id="sub">SUBSCRIBES</a>
-                            <!-- <button>
-                                <div id="selectContainer">
-                                    <select id="options" style="display: none;">
-                                        <option value="all">전체</option>
-                                        <option value="custom">맞춤설정</option>
-                                        <option value="none">없음</option>
-                                        <option value="cancel">구독취소</option>
-                                    </select>
-                                </div>
-                            </button>
-                        </div> -->
-                    </button>
+                        <div class="buttoncon">
+                            <button onclick="changeImg()" class="button" id="sub">SUBSCRIBE</button>
+                            <div style="display: none;" id="options">
+                                <a href="#" id="all" onclick="selectOption('all')">
+                                    <img src="images/Subscribe/notifications_active.svg" alt="">전체</a>
+                                <a href="#" id="custom" onclick="selectOption('custom')">
+                                    <img src="images/Subscribe/notifications.svg" alt="">맞춤설정</a>
+                                <a href="#" id="none" onclick="selectOption('none')">
+                                    <img src="images/Subscribe/notifications_off.svg" alt="">없음</a>
+                                <a href="#" id="cancel" onclick="showConfirmation()">
+                                    <img src="images/Subscribe/person_remove.svg" alt="">구독취소</a>
+                            </div>
+                        </div>
+        
 
                 </div>
                 <div class="videoDesc">
@@ -112,7 +114,9 @@
                         <input type="text" placeholder="write comments..">
                     </div>
 
-                    <div class="old-comment">
+                    <div class="comment-container">
+                        <!-- 댓글기능 추가 시 js에서 불러올 것 -->
+                        <!-- 추가할 댓글 양식 샘플임 -->
                         <img src="images/User-Avatar.svg">
                         <div>
                             <h3>Name <span>2 days ago</span></h3>
@@ -127,35 +131,7 @@
                         </div>
                     </div>
 
-                    <div class="old-comment">
-                        <img src="images/User-Avatar.svg">
-                        <div>
-                            <h3>Name <span>2 days ago</span></h3>
-                            <p>i dont know wat to do</p>
-                            <div class="like-action">
-                                <img src="images/liked.svg">
-                                <span>2</span>
-                                <img src="images/DisLiked.svg">
-                                <span>5</span>
-                                <span>REPLAY</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="old-comment">
-                        <img src="images/User-Avatar.svg">
-                        <div>
-                            <h3>Name <span>2 days ago</span></h3>
-                            <p>i dont know wat to do</p>
-                            <div class="like-action">
-                                <img src="images/liked.svg">
-                                <span>2</span>
-                                <img src="images/DisLiked.svg">
-                                <span>5</span>
-                                <span>REPLAY</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 
             </div>
