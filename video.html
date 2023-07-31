@@ -22,7 +22,7 @@
 
 <body>
     <header class="navi">
-        <div class="hamburger" onclick="toggleSidebar()">
+        <div class="hamburger">
             <img src="images/hamburger.svg">
         </div>
         <div class="yt-button">
@@ -47,263 +47,157 @@
         </div>
     </header>
 
-    <div class="wrap">
-        <aside>
-            <div class="sidebar">
-                <div class="menu">
-                    <div class="top">
-                        <a href=""><img src="images/home-fill.svg">
-                            <p>Home</p>
-                        </a>
-                        <a href=""><img src="images/explore.svg">
-                            <p>Explore</p>
-                        </a>
-                        <a href=""><img src="images/subscriptions.svg">
-                            <p>Subscriptions</p>
-                        </a>
-                        <hr class="gone-menu">
-                    </div>
 
-                    <div class="top" id="wrap">
-                        <a href=""><img src="images/library.svg">
-                            <p>Library</p>
-                        </a>
-                        <a href=""><img src="images/history.svg">
-                            <p>History</p>
-                        </a>
-                        <a href="" class="gone-menu"><img src="images/yourVideos.svg">
-                            <p>Your Videos</p>
-                        </a>
-                        <a href="" class="gone-menu"><img src="images/watchLater.svg">
-                            <p>Watch Later</p>
-                        </a>
-                        <a href="" class="gone-menu"><img src="images/liked.svg">
-                            <p>Liked Videos</p>
-                        </a>
-                        <a href="#" id="moreButton gone-menu"><img src="images/arrowBottom.svg">
-                            <p>Show More</p>
-                        </a>
-                        <a href=""><img src="images/playlist_play.svg">
-                            <p>나도코딩</p>
-                        </a>
-                        <a href=""><img src="images/playlist_play.svg">
-                            <p>드림코딩</p>
-                        </a>
-                        <a href=""><img src="images/playlist_play.svg">
-                            <p>전쓰트의 게임채널</p>
-                        </a>
-                        <a href="#" id="collButton"><img src="images/expand_less.svg">
-                            <p>Collapse</p>
-                        </a>
-                        <hr class="gone-menu">
-                    </div>
-
-                    <div class="subscriptions gone-menu" id="wrap2">
-                        <h3>SUBSCRIPTIONS</h3>
-                        <a href=""><img src="images/">
-                            <p>NAME</p>
-                        </a>
-                        <a href=""><img src="images/">
-                            <p>NAME</p>
-                        </a>
-                        <a href=""><img src="images/">
-                            <p>NAME</p>
-                        </a>
-                        <a href="#" id="moreButton2"><img src="images/arrowBottom.svg">
-                            <p>Show More</p>
-                        </a>
-                        <a href="" class="pl-icon"><img src="images/">
-                            <p>NAME</p>
-                        </a>
-                        <a href="" class="pl-icon"><img src="images/">
-                            <p>NAME</p>
-                        </a>
-                        <a href="" class="pl-icon"><img src="images/">
-                            <p>NAME</p>
-                        </a>
-                        <a href="#" id="collButton2"><img src="images/expand_less.svg">
-                            <p>Collapse</p>
-                        </a>
-                        <hr>
-                    </div>
-
-                    <div class="more-from gone-menu">
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <hr>
-                    </div>
-
-                    <div class="bottom gone-menu">
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <hr>
-                    </div>
-
-                    <div class="footer gone-menu">
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                        <a href=""><img src=""></a>
-                    </div>
+    <main class="wrap">
+        <!-- 비디오 재생 창 (댓글 포함) -->
+        <div class="primary">
+            <!-- 영상 재생 부분 -->
+            <div class="videoPlayer">
+                <!-- videoPlayer기준으로 비디오 불러옴 -->
+                <!-- 태그 넣기 -->
+                <div class="tags">
                 </div>
-            </div>
-        </aside>
-
-        <main>
-            <!-- 비디오 재생 창 (댓글 포함) -->
-            <div class="primary">
-                <!-- 영상 재생 부분 -->
-                <div class="videoPlayer">
-                    <!-- videoPlayer기준으로 비디오 불러옴 -->
-                    <!-- 태그 넣기 -->
-                    <div class="tags">
-                    </div>
-                    <div class="youtubePlayer"></div>
-                    <!-- 영상 제목 + 조회수 + 날짜 + 좋아요 + 싫어요 + 공유 + 재생목록 저장 -->
-                    <div class="videoInfoContainer">
-                        <span id="videoTitle">(영상제목)Blind Woodturner: Turning passion into fine art</span>
-                        <div class="videoInfo">
-                            <span id="videoInfoText">576,969 views &bull; Oct 8, 2021</span>
-                            <div id="videoFeatBtn">
-                                <a href=""><img src="images/liked.svg" alt="">좋아요</a>
-                                <a href=""><img src="images/liked.svg" alt="">싫어요</a>
-                                <a href=""><img src="images/liked.svg" alt="">SHARE</a>
-                                <a href=""><img src="images/liked.svg" alt="">SAVE</a>
-                                <a href=""><img src="images/liked.svg" alt="">더보기</a>
-                            </div>
+                <div class="youtubePlayer"></div>
+                <!-- 영상 제목 + 조회수 + 날짜 + 좋아요 + 싫어요 + 공유 + 재생목록 저장 -->
+                <div class="videoInfoContainer">
+                    <span id="videoTitle">(영상제목)Blind Woodturner: Turning passion into fine art</span>
+                    <div class="videoInfo">
+                        <span id="videoInfoText">576,969 views &bull; Oct 8, 2021</span>
+                        <div id="videoFeatBtn">
+                            <a href=""><img src="images/liked.svg" alt="">좋아요</a>
+                            <a href=""><img src="images/liked.svg" alt="">싫어요</a>
+                            <a href=""><img src="images/liked.svg" alt="">SHARE</a>
+                            <a href=""><img src="images/liked.svg" alt="">SAVE</a>
+                            <a href=""><img src="images/liked.svg" alt="">더보기</a>
                         </div>
                     </div>
+                </div>
+                <hr>
+            </div>
+
+            <!-- 영상 정보, js에서 불러오기 -->
+            <div class="videoDescFrame">
+                <div class="channelInfo">
+                    <a href="#">
+                        <img src="images/User-Avatar.svg" alt="채널 프로필 사진">
+                        <p id="channelName">(채널명)Marcus Levin</p>
+                    </a>
+                        <span id="subscribers">(구독자수)1.2M subscribers</span>
+                    
+                    <button type="button" class="buttoncon">
+                        <a onclick="changeImg()" id="sub">SUBSCRIBES</a>
+                            <!-- <button>
+                                <div id="selectContainer">
+                                    <select id="options" style="display: none;">
+                                        <option value="all">전체</option>
+                                        <option value="custom">맞춤설정</option>
+                                        <option value="none">없음</option>
+                                        <option value="cancel">구독취소</option>
+                                    </select>
+                                </div>
+                            </button>
+                        </div> -->
+                    </button>
+
+                </div>
+                <div class="videoDesc">
+                    <!-- video.js에서 받아오기 -->
+                    <p id="videoDescText">(영상 설명)</p>
                     <hr>
                 </div>
+                <div class="comments">
+                    <h4>3 Comments</h4>
+                    <div class="add-comment">
+                        <img src="images/User-Avatar.svg">
+                        <input type="text" placeholder="write comments..">
+                    </div>
 
-                <!-- 영상 정보, js에서 불러오기 -->
-                <div class="videoDescFrame">
-                    <div class="channelInfo">
-                        <a href="#">
-                            <img src="images/User-Avatar.svg" alt="채널 프로필 사진">
-                            <p id="channelName">(채널명)Marcus Levin</p>
-                        </a>
-                            <span id="subscribers">(구독자수)1.2M subscribers</span>
-                        
-                        <button type="button" class="buttoncon">
-                            <div class="buttoncon">
-                                <div onclick="changeImg()" id="sub">SUBSCRIBES</div>
-                                <button>
-                                    <div id="selectContainer">
-                                        <select id="options" style="display: none;">
-                                            <option value="all">전체</option>
-                                            <option value="custom">맞춤설정</option>
-                                            <option value="none">없음</option>
-                                            <option value="cancel">구독취소</option>
-                                        </select>
-                                    </div>
-                                </button>
+                    <div class="old-comment">
+                        <img src="images/User-Avatar.svg">
+                        <div>
+                            <h3>Name <span>2 days ago</span></h3>
+                            <p>i dont know wat to do</p>
+                            <div class="like-action">
+                                <img src="images/liked.svg">
+                                <span>2</span>
+                                <img src="images/liked.svg">
+                                <span>5</span>
+                                <span>REPLAY</span>
                             </div>
-                        </button>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div class="videoDesc">
-                        <!-- video.js에서 받아오기 -->
-                        <p id="videoDescText">(영상 설명)</p>
-                        <hr>
-                    </div>
-                    <div class="comments">
-                        <h4>3 Comments</h4>
-                        <div class="add-comment">
-                            <img src="images/User-Avatar.svg">
-                            <input type="text" placeholder="write comments..">
-                        </div>
-    
-                        <div class="old-comment">
-                            <img src="images/User-Avatar.svg">
-                            <div>
-                                <h3>Name <span>2 days ago</span></h3>
-                                <p>i dont know wat to do</p>
-                                <div class="like-action">
-                                    <img src="images/liked.svg">
-                                    <span>2</span>
-                                    <img src="images/liked.svg">
-                                    <span>5</span>
-                                    <span>REPLAY</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="old-comment">
-                            <img src="images/User-Avatar.svg">
-                            <div>
-                                <h3>Name <span>2 days ago</span></h3>
-                                <p>i dont know wat to do</p>
-                                <div class="like-action">
-                                    <img src="images/liked.svg">
-                                    <span>2</span>
-                                    <img src="images/liked.svg">
-                                    <span>5</span>
-                                    <span>REPLAY</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="old-comment">
-                            <img src="images/User-Avatar.svg">
-                            <div>
-                                <h3>Name <span>2 days ago</span></h3>
-                                <p>i dont know wat to do</p>
-                                <div class="like-action">
-                                    <img src="images/liked.svg">
-                                    <span>2</span>
-                                    <img src="images/liked.svg">
-                                    <span>5</span>
-                                    <span>REPLAY</span>
-                                </div>
+                    <div class="old-comment">
+                        <img src="images/User-Avatar.svg">
+                        <div>
+                            <h3>Name <span>2 days ago</span></h3>
+                            <p>i dont know wat to do</p>
+                            <div class="like-action">
+                                <img src="images/liked.svg">
+                                <span>2</span>
+                                <img src="images/liked.svg">
+                                <span>5</span>
+                                <span>REPLAY</span>
                             </div>
                         </div>
                     </div>
-                    
+
+                    <div class="old-comment">
+                        <img src="images/User-Avatar.svg">
+                        <div>
+                            <h3>Name <span>2 days ago</span></h3>
+                            <p>i dont know wat to do</p>
+                            <div class="like-action">
+                                <img src="images/liked.svg">
+                                <span>2</span>
+                                <img src="images/liked.svg">
+                                <span>5</span>
+                                <span>REPLAY</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
-            <!-- 오른쪽 영상 추천 목록 -->
-            <div class="secondary">
-                <div class="secondary-video-list">
-                    <a href="" class="small-thumbnail">
-                        <img src="images/image 1.svg" alt="">
-                    </a>
-                    <div class="secondary-vid-info">
-                        <a href="">video title</a>
-                        <p>channel name</p>
-                        <p>10k Views</p>
-                    </div>
+            
+        </div>
+        <!-- 오른쪽 영상 추천 목록 -->
+        <div class="secondary">
+            <div class="secondary-video-list">
+                <a href="" class="small-thumbnail">
+                    <img src="images/image 1.svg" alt="">
+                </a>
+                <div class="secondary-vid-info">
+                    <a href="">video title</a>
+                    <p>channel name</p>
+                    <p>10k Views</p>
                 </div>
-
-                <div class="secondary-video-list">
-                    <a href="" class="small-thumbnail">
-                        <img src="images/image 1.svg" alt="">
-                    </a>
-                    <div class="secondary-vid-info">
-                        <a href="">video title</a>
-                        <p>channel name</p>
-                        <p>10k Views</p>
-                    </div>
-                </div>
-
-                <div class="secondary-video-list">
-                    <a href="" class="small-thumbnail">
-                        <img src="images/image 1.svg" alt="">
-                    </a>
-                    <div class="secondary-vid-info">
-                        <a href="">video title</a>
-                        <p>channel name</p>
-                        <p>10k Views</p>
-                    </div>
-                </div>
-
             </div>
-        </main>
+
+            <div class="secondary-video-list">
+                <a href="" class="small-thumbnail">
+                    <img src="images/image 1.svg" alt="">
+                </a>
+                <div class="secondary-vid-info">
+                    <a href="">video title</a>
+                    <p>channel name</p>
+                    <p>10k Views</p>
+                </div>
+            </div>
+
+            <div class="secondary-video-list">
+                <a href="" class="small-thumbnail">
+                    <img src="images/image 1.svg" alt="">
+                </a>
+                <div class="secondary-vid-info">
+                    <a href="">video title</a>
+                    <p>channel name</p>
+                    <p>10k Views</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
 
 </body>
 <script src="hamburger.js"></script>
