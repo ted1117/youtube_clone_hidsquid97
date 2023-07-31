@@ -1,1 +1,9 @@
 /* Video Page */
+
+.wrap {
+    display: flex;
+}
+
+video {
+    width: 100%;
+}

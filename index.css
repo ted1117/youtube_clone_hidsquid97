@@ -35,7 +35,7 @@ body {
     line-height: normal;
 }
 
-.top-menu button:first-child{
+.top-menu button:first-child {
     background-color: white;
     color: #212121;
 }
@@ -48,12 +48,15 @@ body {
     background-color: white;
     color: #303030;
 }
+
 section {
     width: 100%;
 }
+
 .container {
     /* width: 100vh; */
-    background: skyblue; /*테스트용 컬러*/
+    background: #000;
+    /*테스트용 컬러*/
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 20px;
@@ -65,19 +68,97 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column-gap: 16px;
     grid-row-gap: 30px;
-    margin-top: 15px;   
+    margin-top: 15px;
 }
 
-.search-border{
-  border: 2px solid rgb(51, 49, 49);
-  display: flex;
+.search-border {
+    border: 2px solid rgb(51, 49, 49);
+    display: flex;
 }
 
 
 /* item과 버튼이 겹치게 설정 */
-.button Nextbutton{
-    width:20px;
-    height:20px;
-    z-index:5px;
-    right:70px; 
+.button Nextbutton {
+    width: 20px;
+    height: 20px;
+    z-index: 5px;
+    right: 70px;
+}
+
+.thumbnail {
+    display: flex;
+    width: 276px;
+    height: 155px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 10px;
+
+}
+
+.video-info {
+    display: flex;
+    width: 204px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.title {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.view {
+    color: #AAA;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.name {
+    color: #AAA;
+    text-decoration: none;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.title-image {
+    float: left;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0px 12px 26px 0px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.title-name-view-img {
+    padding-top: 12px;
+    align-items: flex-start;
+}
+
+a{
+    text-decoration: none;
+    color: #AAA;
 }
