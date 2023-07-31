@@ -164,20 +164,20 @@
                         <span id="subscribers">1.2M subscribers</span>
                     </div>
                 </div>
-                <button type="button" class="buttoncon">
-                    <a onclick="changeImg()" id="sub">SUBSCRIBES</a>
-                        <!-- <button>
-                            <div id="selectContainer">
-                                <select id="options" style="display: none;">
-                                    <option value="all">전체</option>
-                                    <option value="custom">맞춤설정</option>
-                                    <option value="none">없음</option>
-                                    <option value="cancel">구독취소</option>
-                                </select>
-                            </div>
-                        </button>
-                    </div> -->
-                </button>
+                <div class="buttoncon">
+                    <button onclick="changeImg()" class="button" id="sub">SUBSCRIBE</button>
+                    <div style="display: none;" id="options">
+                        <a href="#" id="all" onclick="selectOption('all')">
+                            <img src="images/Subscribe/notifications_active.svg" alt="">전체</a>
+                        <a href="#" id="custom" onclick="selectOption('custom')">
+                            <img src="images/Subscribe/notifications.svg" alt="">맞춤설정</a>
+                        <a href="#" id="none" onclick="selectOption('none')">
+                            <img src="images/Subscribe/notifications_off.svg" alt="">없음</a>
+                        <a href="#" id="cancel" onclick="showConfirmation()">
+                            <img src="images/Subscribe/person_remove.svg" alt="">구독취소</a>
+                    </div>
+                </div>
+
             </div>
             <!--Channel Toolbar-->
             <div class="channelToolbar">
