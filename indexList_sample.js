@@ -54,7 +54,8 @@ xhr.onreadystatechange = function () {
 
             // 채널 이름
             const linkB = document.createElement("a");
-            linkB.setAttribute("href", `channel.html?id=${response.video_channel}`); // 채널 url
+            let video_channel = response.video_channel;
+            linkB.setAttribute("href", `channel.html?channel=${video_channel}`); // 채널 url
             linkB.innerText = response[i].video_channel;
 
             //  조회수 + 업로드 일자
