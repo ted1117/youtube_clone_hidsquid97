@@ -48,3 +48,5 @@ function createVideoItem(id) {
     // 요청 전송
     xhr.send();
 }
+
+createVideoItem(id);
