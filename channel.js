@@ -9,7 +9,6 @@ function channelInfo(video_channel) {
     let apiUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${video_channel}`;
     xhr.open("POST", apiUrl, true);
 
-    console.log(apiUrl);
     // 응답 처리 설정
     xhr.onreadystatechange = function () {
         if (xhr.readyState === xhr.DONE && xhr.status === 200) {
@@ -25,7 +24,7 @@ function channelInfo(video_channel) {
                 // console.log(response.channel_banner);
                 // console.log(response.channel_name);
                 // console.log(response.channel_profile);
-                console.log(response.subscribers);
+                // console.log(response.subscribers);
 
                 // 배너 이미지
                 const banner = document.querySelector(".banner");
@@ -50,10 +49,6 @@ function channelInfo(video_channel) {
                 // 구독자 수
                 const subscribers = document.querySelector("#subscribers");
                 subscribers.innerHTML = adjustUnit(response.subscribers);
-
-
-                
-                
             }
         }
     };
