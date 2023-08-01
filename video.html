@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="video.css">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="subscribe.css">
     <title>Youtube_Clone_Video</title>
 </head>
-<style>
+<!-- <style>
     body {
         /* 테스트용 배경 색상 */
         background-color: skyblue;
     }
-</style>
+</style> -->
 
 <body>
     <header class="navi">
@@ -82,60 +83,59 @@
                 <div class="channelInfo">
                     <a href="#">
                         <img src="images/User-Avatar.svg" alt="채널 프로필 사진">
-                        <p id="channelName">(채널명)Marcus Levin</p>
-                    </a>
-                        <span id="subscribers">(구독자수)1.2M subscribers</span>
-                    
-                        <div class="buttoncon">
-                            <button onclick="changeImg()" class="button" id="sub">SUBSCRIBE</button>
-                            <div style="display: none;" id="options">
-                                <a href="#" id="all" onclick="selectOption('all')">
-                                    <img src="images/Subscribe/notifications_active.svg" alt="">전체</a>
-                                <a href="#" id="custom" onclick="selectOption('custom')">
-                                    <img src="images/Subscribe/notifications.svg" alt="">맞춤설정</a>
-                                <a href="#" id="none" onclick="selectOption('none')">
-                                    <img src="images/Subscribe/notifications_off.svg" alt="">없음</a>
-                                <a href="#" id="cancel" onclick="showConfirmation()">
-                                    <img src="images/Subscribe/person_remove.svg" alt="">구독취소</a>
-                            </div>
+                        <div class="channelInfoDetail">
+                            <p id="channelName">(채널명)Marcus Levin</p>
+                            <span id="subscribers">(구독자수)1.2M subscribers</span>
                         </div>
-        
-
+                    </a>
+                    <div class="buttoncon">
+                        <button onclick="changeImg()" class="button" id="sub">SUBSCRIBE</button>
+                        <div style="display: none;" id="options">
+                            <a href="#" id="all" onclick="selectOption('all')">
+                                <img src="images/Subscribe/notifications_active.svg" alt="">
+                                <span>전체</span>
+                            </a>
+                            <a href="#" id="custom" onclick="selectOption('custom')">
+                                <img src="images/Subscribe/notifications.svg" alt="">
+                                <span>맞춤설정</span>
+                            </a>
+                            <a href="#" id="none" onclick="selectOption('none')">
+                                <img src="images/Subscribe/notifications_off.svg" alt="">
+                                <span>없음</span>
+                            </a>
+                            <a href="#" id="cancel" onclick="showConfirmation()">
+                                <img src="images/Subscribe/person_remove.svg" alt="">
+                                <span>구독 취소</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="videoDesc">
                     <!-- video.js에서 받아오기 -->
-                    <p id="videoDescText">(영상 설명)</p>
-                    <hr>
-                </div>
-                <div class="comments">
-                    <h4>3 Comments</h4>
-                    <div class="add-comment">
-                        <img src="images/User-Avatar.svg">
-                        <input type="text" placeholder="write comments..">
-                    </div>
+                    <p id="videoDescText">Chris Fisher, also known as the Blind Woodturner, learned his craft by
+                        listening to hundreds of hours of YouTube videos
+                        and experimenting in his workshop. Now he’s a YouTube creator himself, sells his products
+                        worldwide, and does
+                        demonstrations all around the country.</p>
 
-                    <div class="comment-container">
-                        <!-- 댓글기능 추가 시 js에서 불러올 것 -->
-                        <!-- 추가할 댓글 양식 샘플임 -->
-                        <img src="images/User-Avatar.svg">
-                        <div>
-                            <h3>Name <span>2 days ago</span></h3>
-                            <p>i dont know wat to do</p>
-                            <div class="like-action">
-                                <img src="images/liked.svg">
-                                <span>2</span>
-                                <img src="images/DisLiked.svg">
-                                <span>5</span>
-                                <span>REPLAY</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    
                 </div>
-                
+                <hr>
+
+
             </div>
-            
+            <div class="comments">
+                <h4>3 Comments</h4>
+                <div class="add-comment">
+                    <img src="images/User-Avatar.svg">
+                    <input class="comment-text" type="text" placeholder="write comments..">
+                    <button class="posting" type="button">posting</button>
+                </div>
+
+                <div class="comment-container">
+                    <!-- 댓글기능 js에서 불러올 것 -->
+                </div>
+            </div>
+
         </div>
         <!-- 오른쪽 영상 추천 목록 -->
         <div class="secondary">
@@ -181,5 +181,7 @@
 <script src="more_view2.js"></script>
 <script src="video.js"></script>
 <script src="subcribe.js"></script>
+<script src="comments.js"></script>
+
 
 </html>
