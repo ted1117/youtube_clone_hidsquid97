@@ -7,6 +7,12 @@ header {
     align-items: center;
     width: 100%;
     height: 56px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Hamburger Menu */
@@ -16,6 +22,10 @@ header {
     margin: 8px;
     align-items: flex-start;
     gap: 10px;
+}
+
+.hamburger:hover {
+    cursor: pointer;
 }
 
 /* Image Attribute */

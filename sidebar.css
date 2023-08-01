@@ -12,6 +12,8 @@
     font-weight: 400;
     line-height: normal;
     align-items: flex-start;
+    /* 230801 */
+    overflow-y: auto;
 }
 .top a:first-child{
     margin-top: 10px;

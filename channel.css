@@ -2,6 +2,15 @@ body {
     background: #212121;
 }
 
+.wrap {
+    display: flex;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 main {
     background-color: #000000;
     flex: 1;
@@ -10,7 +19,7 @@ main {
 }
 
 /* Banner */
-/* .banner {
+.banner {
     display: flex;
     width: 1200px;
     height: 192px;
@@ -23,7 +32,7 @@ main {
     width: 1200px;
     height: 192px;
     flex-shrink: 0;
-} */
+}
 
 /* Channel Title */
 .channelTitle {
@@ -49,11 +58,26 @@ main {
 }
 
 .channelProfilePic {
-    width: 104px;
+    /* width: 104px;
     display: flex;
     padding-right: 0px;
     align-items: flex-start;
-    gap: 10px;
+    gap: 10px; */
+    display: flex;
+        padding-right: 24px;
+        align-items: flex-start;
+        gap: 10px;
+}
+
+.channelProfilePic>img {
+    display: flex;
+        width: 80px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+
+    border-radius: 80px;
+        opacity: 0.6499999761581421;
 }
 
 .profileImg {
@@ -305,18 +329,3 @@ header {
     z-index: 1000;
 }
 
-/* aside와 main을 가로로 배열하기 위한 컨테이너 스타일 */
-.wrap {
-    display: flex;
-    /* overflow-y: auto;  */
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* aside 영역 스타일 */
-aside {
-    overflow-y: auto;
-}
