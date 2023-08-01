@@ -17,7 +17,7 @@
 }
 .top a:first-child{
     margin-top: 10px;
-}   
+}
 .sidebar a {
     color: #fff;
     display: flex;
@@ -42,16 +42,8 @@
     padding-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
-    
 }
 
-.more-from h3 {
-    display: flex;
-    width: 224px;
-    height: 32px;
-    padding-right: 0px;
-    align-items: center;
-}
 
 /* 햄버거 활성화시 이상하다 수정필요 */
 .active {

@@ -329,3 +329,18 @@ header {
     z-index: 1000;
 }
 
+/* aside와 main을 가로로 배열하기 위한 컨테이너 스타일 */
+.wrap {
+    display: flex;
+    /* overflow-y: auto;  */
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* aside 영역 스타일 */
+aside {
+    overflow-y: auto;
+}

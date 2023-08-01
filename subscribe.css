@@ -1,12 +1,6 @@
 .buttoncon {
     position: relative;
     cursor: pointer;
-    border-radius: 2px;
-    background: #C00;
-    display: flex;
-    padding: 10px 16px;
-    align-items: flex-start;
-    gap: 10px;
 }
 
 .button-content {

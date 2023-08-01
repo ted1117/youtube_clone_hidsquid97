@@ -40,7 +40,7 @@ body {
     line-height: normal;
 }
 
-.top-menu button:first-child {
+.top-menu button:first-child{
     background-color: white;
     color: #212121;
 }
@@ -53,15 +53,12 @@ body {
     background-color: white;
     color: #303030;
 }
-
 section {
     width: 100%;
 }
-
 .container {
     /* width: 100vh; */
-    background: #000;
-    /*테스트용 컬러*/
+    background: skyblue; /*테스트용 컬러*/
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 20px;
@@ -79,9 +76,9 @@ section {
     height: 100vh;
 }
 
-.search-border {
-    border: 2px solid rgb(51, 49, 49);
-    display: flex;
+.search-border{
+  border: 2px solid rgb(51, 49, 49);
+  display: flex;
 }
 
 
