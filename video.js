@@ -48,6 +48,3 @@ function createVideoItem(id) {
     // 요청 전송
     xhr.send();
 }
-
-// id = 0부터 아이템 불러오기
-createVideoItem(id);
