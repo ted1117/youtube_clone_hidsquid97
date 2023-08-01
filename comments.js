@@ -1,7 +1,7 @@
 const addComment = document.querySelector(".add-comment");
 const inputComment = document.querySelector(".comment-text");
 
-// const posting = document.querySelector('.posting');
+const posting = document.querySelector('.posting');
 
 const container = document.querySelector(".comment-container");
 
@@ -45,8 +45,8 @@ inputComment.addEventListener('keyup', function(event) {
 }); 
 
 
-// // click시 posting
-// posting.addEventListener('click', function(event) {
-//     commentForm();
-//     inputComment.value = "";
-// });
+// click시 posting
+posting.addEventListener('click', function(event) {
+    commentForm();
+    inputComment.value = "";
+});
