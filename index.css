@@ -6,6 +6,11 @@ body {
 
 .wrap {
     display: flex;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* nav */
@@ -69,6 +74,9 @@ section {
     grid-column-gap: 16px;
     grid-row-gap: 30px;
     margin-top: 15px;
+
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .search-border {
@@ -97,13 +105,13 @@ section {
 
 }
 
-.video-info {
+/* .video-info {
     display: flex;
     width: 204px;
     flex-direction: column;
     align-items: flex-start;
     color: white;
-}
+} */
 
 .title {
     color: white;
@@ -132,7 +140,6 @@ section {
 .name {
     color: #AAA;
     text-decoration: none;
-    text-align: right;
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -159,7 +166,51 @@ section {
     align-items: flex-start;
 }
 
-a{
+a {
     text-decoration: none;
     color: #AAA;
+}
+
+.video {
+    width: 276px;
+    height: 155px;
+    border-radius: 0;
+    /* 초기값: 모서리가 없는 상태 */
+    display: none;
+    overflow: hidden; /* 추가: 요소가 변할 때 모서리를 감추기 위해 */
+    animation: revealVideo 0.3s linear forwards; /* 애니메이션 적용 */
+}
+
+@keyframes revealVideo {
+    from {
+      border-radius: 10px; /* 시작 값: 둥근 모서리 */
+    }
+    to {
+      border-radius: 0; /* 종료 값: 모서리가 없는 상태 */
+    }
+  }
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    display: flex;
+    width: 276px;
+    height: 155px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden; /* 영상이 썸네일 영역을 벗어나지 않도록 설정합니다. */
+}
+
+.video-info {
+    display: flex;
+    width: 204px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
 }
