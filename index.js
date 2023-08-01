@@ -1,11 +1,8 @@
 
 function createVideoItem(video_id) {
     let xhr = new XMLHttpRequest();
-<<<<<<< HEAD
 
     // API 요청 설정
-=======
->>>>>>> js_2
     let apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${video_id}`;
     xhr.open("GET", apiUrl, true);
     xhr.onreadystatechange = function () {
