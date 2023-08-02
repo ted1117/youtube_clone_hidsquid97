@@ -1,4 +1,5 @@
 /* Video Page */
+/* wrap 위치 수정 필요: 절반 사이즈로 화면 축소 시 비디오 창 시작 위치가 이상하게 나옴 */
 
 body {
     background-color: #181818;
@@ -134,7 +135,8 @@ video {
     display: flex;
     padding-top: 16px;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    justify-content: space-between;
     gap: 40%;
     flex-direction: row;
     width: 100%;
@@ -287,6 +289,11 @@ video {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.like-action {
+    display: inline-flex;
+    align-items: center;
 }
 
 .posting {
