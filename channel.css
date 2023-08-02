@@ -39,8 +39,8 @@ main {
     background-color: #181818;
     display: flex;
     padding: 16px 65px 4px 65px;
-    align-items: flex-start;
-    /* gap: 699px; */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .channelProfile {
@@ -109,13 +109,12 @@ main {
     background-color: #181818;
     display: flex;
     padding: 0px 65px;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.toolbars {
+.toolbars{
     /* Layout */
     display: flex;
-    padding: 16px 32px 15px 32px;
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
@@ -129,11 +128,21 @@ main {
     text-transform: uppercase;
 }
 
+.toolbars a {
+    display: inline-flex;
+    padding: 16px 32px 15px 32px;
+}
+
+.toolbars a:hover {
+    border-bottom: 1px solid #AAA;
+}
+
 .toolbarSearch {
     display: flex;
     padding-left: 0px;
     align-items: flex-start;
-    gap: 202px;
+    /* gap: 202px; */
+    padding: 0px 24px;
 }
 
 /* Small Video */
