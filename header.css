@@ -15,6 +15,10 @@ header {
     z-index: 1000;
 }
 
+header img:hover {
+    cursor: pointer;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: flex;
@@ -25,7 +29,8 @@ header {
 }
 
 .hamburger:hover {
-    cursor: pointer;
+    background-color: #121212;
+    border-radius: 32px;
 }
 
 /* Image Attribute */
@@ -49,7 +54,7 @@ header {
     display: flex;
     margin: 0 auto;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .search-Box button {
@@ -93,10 +98,26 @@ header {
 }
 
 /* profile */
+.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
 .profile img {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
     padding: 8px;
     gap: 10px;
+}
+
+.profile>img:nth-child(-n+3):hover {
+    background-color: #121212;
+    border-radius: 32px;
+}
+
+.profile>img:nth-child(4) {
+    width: 32px;
+    height: 32px;
 }
