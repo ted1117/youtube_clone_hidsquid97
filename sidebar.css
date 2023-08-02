@@ -26,11 +26,13 @@
     padding: 5%;
     padding-left: 10%;
     text-decoration-line: none;
+    align-items: center;
 }
 
 .sidebar a img {
     width: 24px;
     height: 24px;
+    margin-right: 20px;
 }
 .sidebar hr {
     width: 100%;
@@ -39,7 +41,7 @@
     background: #303030;
 }
 
-.menu-title {
+.subscriptions {
     font-weight: 700;
     padding-left: 10%;
     margin-top: 20px;
@@ -58,6 +60,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.pl-icon img {
+    filter: invert(100%);
 }
 
 /*  */

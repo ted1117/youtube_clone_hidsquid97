@@ -16,8 +16,9 @@ body {
 
 hr {
     width: 100%;
+    border: 0;
     height: 1px;
-    background: var(--border-color, #303030);
+    background: #303030;
 }
 
 .primary {
@@ -46,6 +47,7 @@ video {
 }
 
 .videoInfoContainer {
+    margin-top: 20px;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -91,8 +93,6 @@ video {
 #videoFeatBtn {
     display: flex;
     gap: 8px;
-    display: flex;
-    align-items: center;
 }
 
 #videoFeatBtn a {
@@ -104,6 +104,9 @@ video {
     line-height: normal;
     text-transform: uppercase;
     text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
 }
 
 #videoFeatBtn img {
@@ -145,16 +148,17 @@ video {
 
 .channelInfo img {
     display: inline-flex;
-    padding: 0px 16px 3px 0px;
     align-items: flex-start;
+    width: 48px;
+    height: 48px;
     gap: 10px;
     margin-left: 0px;
-    margin-right: auto;
+    margin-right: 16px;
+    border-radius: 50%;
 }
 
 .channelInfoDetail {
     display: inline-flex;
-    padding: 11px 0px 10px 0px;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -229,6 +233,7 @@ video {
     flex-direction: column;
     align-items: flex-start;
     flex-direction: column;
+    color: #FFF;
 }
 
 .add-comment {
@@ -247,7 +252,7 @@ video {
     height: 40px;
     justify-content: center;
     align-items: center;
-    margin-right: 16px;
+    border-radius: 50%;
 }
 
 .add-comment>input {
@@ -258,8 +263,15 @@ video {
     align-items: flex-start;
     gap: 4px;
 
-    background-color: #303030;
+    font-size: 14px;
+    background-color: #181818;
+    border: none;
+    border-bottom: 1px solid #303030;
+    color: #AAA;
+}
 
+.add-comment>input:focus {
+    outline: none;
 }
 
 .add-comment::placeholder {
@@ -284,6 +296,12 @@ video {
 .comment-text:focus+.posting {
     display: block;
 }
+
+.comment-item {
+    display: block;
+}
+
+
 
 
 /* Secondary */

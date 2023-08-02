@@ -75,9 +75,7 @@ main {
         height: 80px;
         justify-content: center;
         align-items: center;
-
-    border-radius: 80px;
-        opacity: 0.6499999761581421;
+    border-radius: 50%;
 }
 
 .profileImg {
