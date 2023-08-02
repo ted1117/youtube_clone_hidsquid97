@@ -1,4 +1,5 @@
 /* Sidebar */
+/* 사이드바 축소 부분 수정 필요 */
 
 .sidebar {
     background: #212121;
@@ -33,6 +34,7 @@
     width: 24px;
     height: 24px;
     margin-right: 20px;
+    border-radius: 50%;
 }
 .sidebar hr {
     width: 100%;
@@ -41,11 +43,13 @@
     background: #303030;
 }
 
-.subscriptions {
+.sidebar h3 {
     font-weight: 700;
+    font-size: 14px;
     padding-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #AAA;
 }
 
 /* 햄버거 활성화시 이상하다 수정필요 */
@@ -73,4 +77,13 @@
 
 .sidebar a:focus {
     background: #303030;
+}
+
+.credit {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
