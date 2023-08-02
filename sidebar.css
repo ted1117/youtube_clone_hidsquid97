@@ -1,5 +1,4 @@
 /* Sidebar */
-/* 사이드바 축소 부분 수정 필요 */
 
 .sidebar {
     background: #212121;
@@ -29,11 +28,13 @@
     text-decoration-line: none;
     align-items: center;
 }
+.sidebar p {
+    margin-left: 20px;
+}
 
 .sidebar a img {
     width: 24px;
     height: 24px;
-    margin-right: 20px;
     border-radius: 50%;
 }
 .sidebar hr {
@@ -52,10 +53,12 @@
     color: #AAA;
 }
 
-/* 햄버거 활성화시 이상하다 수정필요 */
+/* 햄버거 활성화시 */
 .active {
-    width: 80px;
+    width: 100px;
     display: block;
+    justify-content: center;
+    align-items: center;
 }
 .active .gone-menu {
     display: none;
@@ -64,6 +67,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.active p {
+    margin-left: 0;
 }
 
 .pl-icon img {
