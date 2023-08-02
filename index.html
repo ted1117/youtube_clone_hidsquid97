@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="header.css">
+    
+    <script src="VideoFormatter.js"></script>
 
     <title>Youtube_Clone</title>
 </head>
@@ -28,10 +30,10 @@
 
         <div class="search-Box">
             <div class="search-border">
-                <input type="text" placeholder="Search">
+                <input id="searchInput" type="text" placeholder="Search">
             </div>
             <button>
-                <img src="images/search.svg" class="search-icon">
+                <img id="searchBtn" src="images/search.svg" class="search-icon">
             </button>
             <img src="images/mic.svg" class="mic-icon">
         </div>
@@ -80,22 +82,22 @@
                         <a href="#" id="moreButton gone-menu"><img src="images/arrowBottom.svg">
                             <p>Show More</p>
                         </a>
-                        <a href=""><img src="images/playlist_play.svg">
+                        <a href=""><img src="images/queue.svg">
                             <p>나도코딩</p>
                         </a>
-                        <a href=""><img src="images/playlist_play.svg">
+                        <a href=""><img src="images/queue.svg">
                             <p>드림코딩</p>
                         </a>
-                        <a href=""><img src="images/playlist_play.svg">
+                        <a href="" class="pl-icon"><img src="images/queue.svg">
                             <p>전쓰트의 게임채널</p>
                         </a>
-                        <a href="#" id="collButton"><img src="images/expand_less.svg">
+                        <a href="#" id="collButton"><img src="images/arrow-top.svg">
                             <p>Collapse</p>
                         </a>
                         <hr class="gone-menu">
                     </div>
 
-                    <div class="subscriptions gone-menu" id="wrap2">
+                    <div class="gone-menu" id="wrap2">
                         <h3>SUBSCRIPTIONS</h3>
                         <a href=""><img src="images/User-Avatar.svg">
                             <p>NAME</p>
@@ -118,58 +120,59 @@
                         <a href=""><img src="images/User-Avatar.svg">
                             <p>NAME</p>
                         </a>
-                        <a href="#" id="collButton2"><img src="images/expand_less.svg">
+                        <a href="#" id="collButton2"><img src="images/arrow-top.svg">
                             <p>Collapse</p>
                         </a>
                         <hr>
                     </div>
 
                     <div class=" more-from gone-menu">
-                       <h3>Explore</h3>
-                        <a href=""><img src="">
-                            <p>Music</p>
+                        <h3>MORE FROM YOUTUBE</h3>
+                        <a href=""><img src="images/premium.svg">
+                            <p>Youtube Premium</p>
                         </a>
-                        <a href=""><img src="">
+                        <a href=""><img src="images/gaming.svg">
                             <p>Gaming</p>
                         </a>
-                        <a href=""><img src="">
+                        <a href=""><img src="images/live.svg">
                             <p>Live</p>
                         </a>
-                        <a href=""><img src="">
+                        <a href=""><img src="images/sports.svg">
                             <p>Sports</p>
+                        </a>
                         <hr>
                     </div>
 
                     <div class="bottom gone-menu">
-                        <h3>More from Youtube</h3>
-                        <a href=""><img src="">
-                        <p>Youtube Premium</p>
+                        <a href=""><img src="images/settings.svg">
+                            <p>Youtube Premium</p>
                         </a>
-                        <a href=""><img src="">
-                        <p>Youtube Studio</p>
+                        <a href=""><img src="images/report.svg">
+                            <p>Youtube Studio</p>
                         </a>
-                        <a href=""><img src="">
-                        <p>Youtube Music</p>
+                        <a href=""><img src="images/help.svg">
+                            <p>Youtube Music</p>
                         </a>
-                        <a href=""><img src="">
-                        <p>Youtube Kids</p>
+                        <a href=""><img src="images/feedback.svg">
+                            <p>Youtube Kids</p>
                         </a>
                         <hr>
                     </div>
 
                     <div class="footer gone-menu">
-                        <a href=""><img src="">
-                            <p>Settings</p>
-                        </a>
-                        <a href=""><img src="">
-                            <p>Report history</p>
-                        </a>
-                        <a href=""><img src="">
-                            <p>Help</p>
-                        </a>
-                        <a href=""><img src="">
-                            <p>Send feedback</p>
-                        </a>
+                        <div class="credit">
+                            <a class="credit_boxes">About Press Copyright
+                                <br>Contact us Creators
+                                Advertise Developers
+                            </a>  
+                            <a>
+                                Terms Privacy Policy Policy & Safety
+                                <br>How Youtube works
+                                <br>Test new features
+                                <br>ⓒ2023 Help_us 
+                            </a>
+                            <br>
+                        </div>
                         <hr>
                     </div>
                 </div>
@@ -182,9 +185,6 @@
 
                 <div>
                     <button>all</button>
-                    <button>Item</button>
-                    <button>Item</button>
-                    <button>Item</button>
                     <button>Item</button>
                     <button>Item</button>
                     <button>Item</button>
