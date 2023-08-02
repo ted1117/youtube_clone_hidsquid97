@@ -14,7 +14,6 @@ body {
 main {
     background-color: #000000;
     flex: 1;
-    padding-top: 64px;
     overflow-y: auto;
 }
 
