@@ -9,6 +9,9 @@
     align-items: center;
     gap: 10px;
 
+    padding: 10px 16px;
+
+    border: none;
     background-color: #f1f1f1;
     color: black;
 
