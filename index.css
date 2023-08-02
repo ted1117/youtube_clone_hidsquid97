@@ -2,6 +2,7 @@
 
 body {
     background: #212121;
+    overflow-y: hidden;
 }
 
 .wrap {
@@ -47,6 +48,7 @@ body {
 
 .top-menu button:hover {
     background-color: #000;
+    cursor: pointer;
 }
 
 .top-menu button:focus {
@@ -76,11 +78,15 @@ section {
     height: 100vh;
 }
 
-.search-border{
+.search-border {
   border: 2px solid rgb(51, 49, 49);
   display: flex;
 }
 
+.search-border input {
+    color: #FFF;
+    padding-left: 3%;
+}
 
 /* item과 버튼이 겹치게 설정 */
 .button Nextbutton {
@@ -89,26 +95,6 @@ section {
     z-index: 5px;
     right: 70px;
 }
-
-.thumbnail {
-    display: flex;
-    width: 276px;
-    height: 155px;
-    padding-bottom: 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 10px;
-
-}
-
-/* .video-info {
-    display: flex;
-    width: 204px;
-    flex-direction: column;
-    align-items: flex-start;
-    color: white;
-} */
 
 .title {
     color: white;

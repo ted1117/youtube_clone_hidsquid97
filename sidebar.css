@@ -15,9 +15,11 @@
     /* 230801 */
     overflow-y: auto;
 }
-.top a:first-child{
+
+.top a:first-child {
     margin-top: 10px;
 }
+
 .sidebar a {
     color: #fff;
     display: flex;
@@ -29,7 +31,6 @@
 .sidebar a img {
     width: 24px;
     height: 24px;
-    margin-right: 20px;
 }
 .sidebar hr {
     width: 100%;
@@ -38,12 +39,12 @@
     background: #303030;
 }
 
-.subscriptions h3 {
+.menu-title {
+    font-weight: 700;
     padding-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 
 /* 햄버거 활성화시 이상하다 수정필요 */
 .active {
@@ -54,18 +55,10 @@
     display: none;
 }
 .active a {
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-
-/*  */
-.pl-icon img {
-    filter: invert(100%);
-}
-
 
 /*  */
 .sidebar a:hover {
@@ -75,4 +68,3 @@
 .sidebar a:focus {
     background: #303030;
 }
-
