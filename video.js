@@ -55,6 +55,12 @@ function createVideoItem(id) {
                 channelTitle = response.video_channel;
                 channelName.textContent = channelTitle;
 
+                // 채널 이미지
+                let urlTitle = String(channelTitle).split(" ").join("_");
+                let imgUrl = `https://storage.googleapis.com/oreumi.appspot.com/${urlTitle}_profile.jpg`;
+                const channelImg = document.querySelector(".channelImg");
+                channelImg.src = imgUrl;
+
                 // 구독자 수
                 getSubs(channelTitle, function (subsCount) {
                     const subscribers = document.getElementById("subscribers");
