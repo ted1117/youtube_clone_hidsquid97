@@ -131,7 +131,8 @@ function getImgs(i) {
 
 // 채널 프로필 사진 불러오기
 function getProfile(channelTitle) {
-    const channelPic = vidInfoUrl + `${channelTitle}_profile.jpg`;
+    const titleConvert = String(channelTitle).split(" ").join("_");
+    const channelPic = vidInfoUrl + `${titleConvert}_profile.jpg`;
     return channelPic;
 }
 
