@@ -1,3 +1,4 @@
+// 채널 정보 불러오기
 function channelVideo(video_channel) {
     // XMLHttpRequest 객체 생성
     let xhr = new XMLHttpRequest();
@@ -14,23 +15,8 @@ function channelVideo(video_channel) {
 
             if (response !== undefined) {
 
-                // 데이터 확인
-                // console.log(response[0].upload_date);
-                // console.log(response[0].video_channel);
-                // console.log(response[0].video_detail);
-                // console.log(response[0].video_id);
-                // console.log(response[0].video_tag);
-                // console.log(response[0].video_title);
-                // console.log(response[0].views);
-
                 for (i in response) {
-                    const playlistVideo = document.querySelector(".playlistVideo");
-
-                    // // 썸네일 추가 코드, videoAPI에서 ID 받아서 처리해야할 듯
-                    const playThumbnail = document.createElement("img");
-                    playThumbnail.setAttribute('src', 'images/image 1.svg');
-                    playThumbnail.classList.add("playThumbnail");
-
+                    
                     const playlistDesc = document.createElement("div");
                     playlistDesc.classList.add("playlistDesc");
 
@@ -51,14 +37,12 @@ function channelVideo(video_channel) {
                     plVideoViews.classList.add("plVideoInfo");
                     plVideoViews.id = "plVideoViews";
 
-                    // 썸네일 테스트용 코드
-                    playlistVideo.appendChild(playThumbnail);
-
                     playlistDesc.appendChild(plVideoName);
                     playlistDesc.appendChild(plVideoChannel);
                     playlistDesc.appendChild(plVideoViews);
 
-                    playlistVideo.appendChild(playlistDesc);
+                    // 비디오 아이디로 영상정보 불러오기
+                    getVideoImg(response[i].video_id, playlistDesc);
                 }
             }
         }
@@ -68,3 +52,41 @@ function channelVideo(video_channel) {
 }
 
 channelVideo(video_channel);
+
+// 비디오 아이디로 영상정보 불러오기
+function getVideoImg(id, playlistDesc) {
+    // XMLHttpRequest 객체 생성
+    let xhr = new XMLHttpRequest();
+
+    // API 요청 설정
+    let apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${id}`;
+    xhr.open("GET", apiUrl, true);
+
+    // 응답 처리 설정
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === xhr.DONE && xhr.status === 200) {
+            // 가져온 응답 처리
+            let response = JSON.parse(xhr.responseText);
+
+            // 데이터 있는지 확인
+            if (response && response.video_id !== undefined) {
+
+                // 누르면 비디오로 연결
+                const tagA = document.createElement("a");
+                tagA.setAttribute('href', `video.html?id=${response.video_id}`);
+
+                // 썸네일
+                const playThumbnail = document.createElement("img");
+                playThumbnail.setAttribute('src', response.image_link);
+                playThumbnail.classList.add("playThumbnail");
+
+                // 추가
+                tagA.appendChild(playThumbnail);
+                tagA.appendChild(playlistDesc);
+                document.querySelector(".playlistVideo").appendChild(tagA);
+            }
+        }
+    };
+    // 요청 전송
+    xhr.send();
+}
