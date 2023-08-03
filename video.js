@@ -53,7 +53,7 @@ function createVideoItem(id) {
                 // 채널명
                 const channelName = document.getElementById("channelName");
                 channelTitle = response.video_channel;
-                channelName.textContent = response.video_channel;
+                channelName.textContent = channelTitle;
 
                 // 구독자 수
                 getSubs(channelTitle, function (subsCount) {
@@ -64,6 +64,10 @@ function createVideoItem(id) {
                 // 영상 설명
                 const videoDescText = document.getElementById("videoDescText");
                 videoDescText.textContent = response.video_detail;
+
+                // secondary 채널 이름
+                const channel = document.querySelector(".channel");
+                channel.textContent = `From ${channelTitle}`;
             }
         }
     };
