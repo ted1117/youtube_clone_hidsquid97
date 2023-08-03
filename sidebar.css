@@ -1,5 +1,9 @@
 /* Sidebar */
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .sidebar {
     background: #212121;
     color: #f1f1f1;
