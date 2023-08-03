@@ -14,7 +14,6 @@ body {
 main {
     background-color: #000000;
     flex: 1;
-    padding-top: 64px;
     overflow-y: auto;
 }
 
@@ -39,8 +38,8 @@ main {
     background-color: #181818;
     display: flex;
     padding: 16px 65px 4px 65px;
-    align-items: flex-start;
-    /* gap: 699px; */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .channelProfile {
@@ -75,9 +74,7 @@ main {
         height: 80px;
         justify-content: center;
         align-items: center;
-
-    border-radius: 80px;
-        opacity: 0.6499999761581421;
+    border-radius: 50%;
 }
 
 .profileImg {
@@ -111,13 +108,12 @@ main {
     background-color: #181818;
     display: flex;
     padding: 0px 65px;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.toolbars {
+.toolbars{
     /* Layout */
     display: flex;
-    padding: 16px 32px 15px 32px;
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
@@ -131,11 +127,21 @@ main {
     text-transform: uppercase;
 }
 
+.toolbars a {
+    display: inline-flex;
+    padding: 16px 32px 15px 32px;
+}
+
+.toolbars a:hover {
+    border-bottom: 1px solid #AAA;
+}
+
 .toolbarSearch {
     display: flex;
     padding-left: 0px;
     align-items: flex-start;
-    gap: 202px;
+    /* gap: 202px; */
+    padding: 0px 24px;
 }
 
 /* Small Video */
@@ -329,3 +335,18 @@ header {
     z-index: 1000;
 }
 
+/* aside와 main을 가로로 배열하기 위한 컨테이너 스타일 */
+.wrap {
+    display: flex;
+    /* overflow-y: auto;  */
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* aside 영역 스타일 */
+aside {
+    overflow-y: auto;
+}

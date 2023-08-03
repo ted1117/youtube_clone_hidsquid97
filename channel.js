@@ -40,7 +40,7 @@ function channelInfo(video_channel) {
 
                 // 채널 프로필
                 const channelProfilePic = document.querySelector(".channelProfilePic");
-                
+
                 const channelImg = document.createElement("img");
                 channelImg.setAttribute('src', response.channel_profile);
 
@@ -48,23 +48,13 @@ function channelInfo(video_channel) {
 
                 // 구독자 수
                 const subscribers = document.querySelector("#subscribers");
-                subscribers.innerHTML = adjustUnit(response.subscribers);
+                subscribers.innerHTML = `${adjustUnit(response.subscribers)} subscribers`;
             }
         }
     };
 
     // 요청 전송
     xhr.send();
-}
-
-function adjustUnit(views) {
-    if (views > 10000) {
-        return (views / 10000).toFixed(1) + "M";
-    } else if (views > 1000) {
-        return (views / 1000).toFixed(1) + "K";
-    } else {
-        return views;
-    }
 }
 
 channelInfo(video_channel);

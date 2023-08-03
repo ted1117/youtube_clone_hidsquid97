@@ -15,21 +15,27 @@
     /* 230801 */
     overflow-y: auto;
 }
-.top a:first-child{
+
+.top a:first-child {
     margin-top: 10px;
-}   
+}
+
 .sidebar a {
     color: #fff;
     display: flex;
     padding: 5%;
     padding-left: 10%;
     text-decoration-line: none;
+    align-items: center;
+}
+.sidebar p {
+    margin-left: 20px;
 }
 
 .sidebar a img {
     width: 24px;
     height: 24px;
-    margin-right: 20px;
+    border-radius: 50%;
 }
 .sidebar hr {
     width: 100%;
@@ -38,42 +44,39 @@
     background: #303030;
 }
 
-.subscriptions h3 {
+.sidebar h3 {
+    font-weight: 700;
+    font-size: 14px;
     padding-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
-    
+    color: #AAA;
 }
 
-.more-from h3 {
-    display: flex;
-    width: 224px;
-    height: 32px;
-    padding-right: 0px;
-    align-items: center;
-}
-
-/* 햄버거 활성화시 이상하다 수정필요 */
+/* 햄버거 활성화시 */
 .active {
-    width: 80px;
+    width: 100px;
     display: block;
+    justify-content: center;
+    align-items: center;
 }
 .active .gone-menu {
     display: none;
 }
 .active a {
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.active p {
+    margin-left: 0;
 }
 
-
-/*  */
 .pl-icon img {
     filter: invert(100%);
 }
-
 
 /*  */
 .sidebar a:hover {
@@ -84,3 +87,11 @@
     background: #303030;
 }
 
+.credit {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
