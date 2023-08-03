@@ -1,4 +1,3 @@
-<!-- 대부분 마무리 지었습니다. 배너 쪽 이미지 크기는 css로 수정해야할 듯 싶어요 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +11,10 @@
     <link rel="stylesheet" href="channel.css">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="subscribe.css">
 
     <script src="VideoFormatter.js"></script>
-    
+
     <title>Youtube_Clone_Channel</title>
 </head>
 
@@ -23,9 +23,9 @@
         <div class="hamburger">
             <img src="images/hamburger.svg">
         </div>
-        <div class="yt-button">
+        <a class="yt-button" href="./index.html">
             <img src="images/Youtube-Logo.svg">
-        </div>
+        </a>
 
         <div class="search-Box">
             <div class="search-border">
@@ -78,13 +78,13 @@
                         <a href="" class="gone-menu"><img src="images/liked.svg">
                             <p>Liked Videos</p>
                         </a>
-                        <a href="#" id="moreButton gone-menu"><img src="images/arrowBottom.svg">
+                        <a href="#" class="moreButton gone-menu"><img src="images/arrowBottom.svg">
                             <p>Show More</p>
                         </a>
-                        <a href=""><img src="images/queue.svg">
+                        <a href="" class="pl-icon"><img src="images/queue.svg">
                             <p>나도코딩</p>
                         </a>
-                        <a href=""><img src="images/queue.svg">
+                        <a href="" class="pl-icon"><img src="images/queue.svg">
                             <p>드림코딩</p>
                         </a>
                         <a href="" class="pl-icon"><img src="images/queue.svg">
@@ -138,7 +138,7 @@
                         </a>
                         <a href=""><img src="images/sports.svg">
                             <p>Sports</p>
-                        <hr>
+                            <hr>
                     </div>
 
                     <div class="bottom gone-menu">
@@ -162,12 +162,12 @@
                             <a class="credit_boxes">About Press Copyright
                                 <br>Contact us Creators
                                 Advertise Developers
-                            </a>  
+                            </a>
                             <a>
                                 Terms Privacy Policy Policy & Safety
                                 <br>How Youtube works
                                 <br>Test new features
-                                <br>ⓒ2023 Help_us 
+                                <br>ⓒ2023 Help_us
                             </a>
                             <br>
                         </div>
@@ -211,12 +211,24 @@
             <!--Channel Toolbar-->
             <div class="channelToolbar">
                 <div class="toolbars">
-                    <a class="toolbarMenu"><p>HOME</p></a>
-                    <a class="toolbarMenu"><p>VIDEOS</p></a>
-                    <a class="toolbarMenu"><p>PLAYLIST</p></a>
-                    <a class="toolbarMenu"><p>COMMUNITY</p></a>
-                    <a class="toolbarMenu"><p>CHANNELS</p></a>
-                    <a class="toolbarMenu"><p>ABOUT</p></a>
+                    <a class="toolbarMenu">
+                        <p>HOME</p>
+                    </a>
+                    <a class="toolbarMenu">
+                        <p>VIDEOS</p>
+                    </a>
+                    <a class="toolbarMenu">
+                        <p>PLAYLIST</p>
+                    </a>
+                    <a class="toolbarMenu">
+                        <p>COMMUNITY</p>
+                    </a>
+                    <a class="toolbarMenu">
+                        <p>CHANNELS</p>
+                    </a>
+                    <a class="toolbarMenu">
+                        <p>ABOUT</p>
+                    </a>
                 </div>
                 <div class="toolbarSearch">
                     <a href="#">
@@ -294,7 +306,7 @@
                                 <span class="plVideoInfo" id="plVideoChannel">채널명</span>
                                 <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
                             </div>
-                        </div>  
+                        </div>
                         <div class="playlistVideo">
                             <img class="playThumbnail" src="images/image 1.svg" alt="썸네일">
                             <div class="playlistDesc">
@@ -418,4 +430,5 @@
 <script src="subcribe.js"></script>
 <script src="channel.js"></script>
 <script src="channelVideo.js"></script>
+
 </html>
