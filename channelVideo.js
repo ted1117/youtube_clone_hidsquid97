@@ -43,11 +43,13 @@ function channelVideo(video_channel) {
                     // 채널명
                     const plVideoChannel = document.createElement("span");
                     plVideoChannel.innerHTML = response[i].video_channel;
+                    plVideoChannel.classList.add("plVideoInfo");
                     plVideoChannel.classList.add("plVideoChannel");
 
                     // 조회수, 업로드일
                     const plVideoViews = document.createElement("span");
                     plVideoViews.innerHTML += adjustUnit(response[i].views) +" "+ calcDateDiff(response[i].upload_date);
+                    plVideoViews.classList.add("plVideoInfo");
                     plVideoViews.classList.add("plVideoViews");
 
                     playlistDesc.appendChild(plVideoName);
