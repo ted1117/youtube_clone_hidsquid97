@@ -1,0 +1,110 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 사이드바 */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 10000;
+    background: #212121;
+    color: #f1f1f1;
+    float: left;
+    width: 240px;
+    height: 100vh;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.sidebar a {
+    color: #fff;
+    display: flex;
+    padding: 5%;
+    padding-left: 8px;
+    margin-left: 8px;
+    text-decoration-line: none;
+    align-items: center;
+}
+
+.sidebar p {
+    margin-left: 20px;
+}
+
+.sidebar a img {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #303030;
+}
+
+.sidebar h3 {
+    font-weight: 700;
+    font-size: 14px;
+    padding-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #AAA;
+}
+
+.sidebar a:not(.yt-button-side):hover {
+    background: #303030;
+}
+
+.sidebar a:focus {
+    background: #303030;
+}
+
+/* sidebar-header 스타일 */
+#sidebar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    align-content: center;
+    height: 56px;
+}
+
+#hamburger2 {
+    display: flex;
+    padding: 8px;
+    margin: 8px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#hamburger2>img {
+    width: 24px;
+    height: 24px;
+}
+
+#hamburger2:hover {
+    cursor: pointer;
+}
+
+/* 햄버거 아이콘 스타일 (있는 경우) */
+.hamburger img {
+    cursor: pointer;
+}
+
+.emphasized {
+
+    /* position: fixed; */
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px, rgba(0, 0, 0, 0.5) 2px 2px 3px 3px;
+    transition: box-shadow 3s ease-in-out;
+    z-index: 100;
+
+}
