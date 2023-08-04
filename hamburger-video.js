@@ -1,11 +1,10 @@
 const hamburger = document.querySelector(".hamburger");
-const hamburger1 = document.getElementById("hamburger1");
 const hamburger2 = document.getElementById("hamburger2");
 const sideMenu = document.getElementById("sideMenu");
 let menuOpen = false;
 
 // 헤더의 햄버거 아이콘을 클릭하면 메뉴 확장
-hamburger1.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
     showMenu();
 });
 
