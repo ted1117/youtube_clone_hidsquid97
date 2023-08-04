@@ -2,7 +2,6 @@
 
 body {
     background: #212121;
-    overflow-y: hidden;
 }
 
 .wrap {
@@ -41,26 +40,28 @@ body {
     line-height: normal;
 }
 
-.top-menu button:first-child{
+.top-menu button:first-child {
     background-color: white;
     color: #212121;
 }
 
 .top-menu button:hover {
     background-color: #000;
-    cursor: pointer;
 }
 
 .top-menu button:focus {
     background-color: white;
     color: #303030;
 }
+
 section {
     width: 100%;
 }
+
 .container {
     /* width: 100vh; */
-    background: black; /*테스트용 컬러*/
+    background: #000;
+    /*테스트용 컬러*/
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 20px;
@@ -75,18 +76,8 @@ section {
     margin-top: 15px;
 
     overflow-y: auto;
-    height: 100vh;
 }
 
-.search-border {
-  border: 2px solid rgb(51, 49, 49);
-  display: flex;
-}
-
-.search-border input {
-    color: #FFF;
-    padding-left: 3%;
-}
 
 /* item과 버튼이 겹치게 설정 */
 .button Nextbutton {
@@ -95,6 +86,26 @@ section {
     z-index: 5px;
     right: 70px;
 }
+
+.thumbnail {
+    display: flex;
+    width: 276px;
+    height: 155px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 10px;
+
+}
+
+/* .video-info {
+    display: flex;
+    width: 204px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+} */
 
 .title {
     color: white;
@@ -131,7 +142,6 @@ section {
     line-height: normal;
 }
 
-
 .title-image {
     float: left;
     display: flex;
@@ -140,14 +150,14 @@ section {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 0px 12px 26px 0px;
+    padding: 0px 12px 26px 0px;
     align-items: flex-start;
     gap: 10px;
 }
 
-.title-name-view-img img {
+.title-name-view-img {
+    padding-top: 12px;
     align-items: flex-start;
-    border-radius: 50%;
 }
 
 a {
@@ -161,18 +171,23 @@ a {
     border-radius: 0;
     /* 초기값: 모서리가 없는 상태 */
     display: none;
-    overflow: hidden; /* 추가: 요소가 변할 때 모서리를 감추기 위해 */
-    animation: revealVideo 0.3s linear forwards; /* 애니메이션 적용 */
+    overflow: hidden;
+    /* 추가: 요소가 변할 때 모서리를 감추기 위해 */
+    animation: revealVideo 0.3s linear forwards;
+    /* 애니메이션 적용 */
 }
 
 @keyframes revealVideo {
     from {
-      border-radius: 10px; /* 시작 값: 둥근 모서리 */
+        border-radius: 10px;
+        /* 시작 값: 둥근 모서리 */
     }
+
     to {
-      border-radius: 0; /* 종료 값: 모서리가 없는 상태 */
+        border-radius: 0;
+        /* 종료 값: 모서리가 없는 상태 */
     }
-  }
+}
 
 .item {
     display: flex;
@@ -188,7 +203,8 @@ a {
     align-items: flex-start;
     flex-shrink: 0;
     border-radius: 10px;
-    overflow: hidden; /* 영상이 썸네일 영역을 벗어나지 않도록 설정합니다. */
+    overflow: hidden;
+    /* 영상이 썸네일 영역을 벗어나지 않도록 설정합니다. */
 }
 
 .video-info {
@@ -197,5 +213,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     color: white;
-    margin-top: 12px;
 }
+
+
+

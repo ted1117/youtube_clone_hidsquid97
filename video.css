@@ -111,8 +111,8 @@ video {
 }
 
 #videoFeatBtn img {
-    width: 18px;
-    height: 17px;
+    width: 20px;
+    height: 19px;
 
     padding: 4px 3px 3px 3px;
 
@@ -142,10 +142,14 @@ video {
     width: 100%;
 }
 
-.channelInfo a {
+.channelInfo > div {
     display: flex;
     flex-direction: row;
     text-decoration: none;
+}
+
+.channelInfoDetail {
+    justify-content: center;
 }
 
 .channelInfo img {
@@ -475,23 +479,33 @@ video {
 .connect_But {
     display: inline-flex;
     gap: 10px;
+    align-items: center;
 }
 
-.font-size{
+.font-size {
     font-size: large;
-    align-items : center;
-    padding : 20px 6px;
+    align-items: center;
+    padding: 20px 6px;
 }
 
-.img-color{
-    filter: invert(100%);
-    padding:4px 0;
+.img-color {
+    padding: 4px 0;
 }
 
-.sortbyBut{
+.sortbyBut {
     border: 0;
     outline: 0;
     color: white;
     background-color: #181818;
     text-align: left;
 }
+
+.channelImg {
+    display: flex;
+    width: 800px;
+    height: 192px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+

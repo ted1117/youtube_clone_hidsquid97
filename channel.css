@@ -20,7 +20,7 @@ main {
 /* Banner */
 .banner {
     display: flex;
-    width: 1200px;
+    width: 880px;
     height: 192px;
     justify-content: center;
     align-items: center;
@@ -63,17 +63,17 @@ main {
     align-items: flex-start;
     gap: 10px; */
     display: flex;
-        padding-right: 24px;
-        align-items: flex-start;
-        gap: 10px;
+    padding-right: 24px;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .channelProfilePic>img {
     display: flex;
-        width: 80px;
-        height: 80px;
-        justify-content: center;
-        align-items: center;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
 }
 
@@ -111,7 +111,7 @@ main {
     align-items: center;
 }
 
-.toolbars{
+.toolbars {
     /* Layout */
     display: flex;
     flex-direction: row;
@@ -204,7 +204,7 @@ main {
 
 #description {
     /* Layout */
-    display: flex;
+    display: left;
     width: 400px;
     height: 80px;
     justify-content: center;
@@ -350,3 +350,43 @@ header {
 aside {
     overflow-y: auto;
 }
+
+.plVideoInfo {
+    color: #AAA;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.playList a{
+    color: #AAA;
+    text-decoration: none;
+    display: inline;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.playlistHeader{
+    display: flex;
+    color: white;
+}
+
+.play_all{
+    color: #AAA;
+    display: inline;
+}
+
+.playBtn img{
+    filter: invert(100%);
+    width: 25px;
+    height: 25px;
+}   
