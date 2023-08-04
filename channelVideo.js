@@ -4,7 +4,7 @@ function channelVideo(video_channel) {
     let xhr = new XMLHttpRequest();
 
     // API 요청 설정
-    let apiUrl = `http://oreumi.appspot.com/channel/getChannelVideo?video_channel=${video_channel}`;
+    let apiUrl = `https://oreumi.appspot.com/channel/getChannelVideo?video_channel=${video_channel}`;
     xhr.open("POST", apiUrl, true);
 
     // 응답 처리 설정
@@ -16,7 +16,7 @@ function channelVideo(video_channel) {
             if (response !== undefined) {
 
                 for (i in response) {
-                    
+
                     const playlistDesc = document.createElement("div");
                     playlistDesc.classList.add("playlistDesc");
 
@@ -33,7 +33,7 @@ function channelVideo(video_channel) {
 
                     // 조회수, 업로드일
                     const plVideoViews = document.createElement("span");
-                    plVideoViews.innerHTML += adjustUnit(response[i].views) +" "+ calcDateDiff(response[i].upload_date);
+                    plVideoViews.innerHTML += adjustUnit(response[i].views) + " " + calcDateDiff(response[i].upload_date);
                     plVideoViews.classList.add("plVideoInfo");
                     plVideoViews.id = "plVideoViews";
 

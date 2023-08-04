@@ -6,7 +6,7 @@ function channelInfo(video_channel) {
     let xhr = new XMLHttpRequest();
 
     // API 요청 설정
-    let apiUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${video_channel}`;
+    let apiUrl = `https://oreumi.appspot.com/channel/getChannelInfo?video_channel=${video_channel}`;
     xhr.open("POST", apiUrl, true);
 
     // 응답 처리 설정
