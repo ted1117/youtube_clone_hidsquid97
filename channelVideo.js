@@ -70,6 +70,8 @@ function getVideoImg(id, playlistDesc) {
 
             // 데이터 있는지 확인
             if (response && response.video_id !== undefined) {
+                const playlistVideo = document.createElement("div");
+                playlistVideo.classList.add("playlistVideo");
 
                 // 누르면 비디오로 연결
                 const tagA = document.createElement("a");
@@ -83,7 +85,8 @@ function getVideoImg(id, playlistDesc) {
                 // 추가
                 tagA.appendChild(playThumbnail);
                 tagA.appendChild(playlistDesc);
-                document.querySelector(".playlistVideo").appendChild(tagA);
+                playlistVideo.appendChild(tagA);
+                document.querySelector(".contentsList").appendChild(playlistVideo);
             }
         }
     };
