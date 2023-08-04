@@ -55,13 +55,16 @@ function createVideoItem(id) {
                 const channelName = document.getElementById("channelName");
                 channelTitle = response.video_channel;
                 channelName.textContent = channelTitle;
+                channelName.href = `channel.html?video_channel=${channelTitle}`;
 
                 // 구독자 수 + 채널 프로필 이미지
                 getSubsPic(channelTitle, function (subsCount, channelPic) {
                     const subscribers = document.getElementById("subscribers");
                     const channelImg = document.querySelector(".channelImg");
+                    const channelImgLink = document.getElementById("profileLink");
                     subscribers.textContent = `${subsCount} subscribers`;
                     channelImg.src = channelPic;
+                    channelImgLink.href = `channel.html?video_channel=${channelTitle}`
                 });
 
                 // 영상 설명
