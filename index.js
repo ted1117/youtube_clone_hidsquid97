@@ -46,9 +46,12 @@ function createVideoItem(searchKeyword) {
                 // 채널 프로필 이미지
                 const video_channel = videoList[i].video_channel;
                 const imgElement = document.createElement("img");
+                const profileLink = document.createElement("a");
+                profileLink.href = `channel.html?video_channel=${video_channel}`;
                 imgElement.setAttribute("src", getProfile(video_channel));
                 imgElement.classList.add("title-image");
-                titleNameViewImgDiv.appendChild(imgElement);
+                profileLink.appendChild(imgElement);
+                titleNameViewImgDiv.appendChild(profileLink);
 
                 // 영상 제목
                 const titleDiv = document.createElement("div");
@@ -69,7 +72,7 @@ function createVideoItem(searchKeyword) {
                 const viewDiv = document.createElement("div");
                 viewDiv.classList.add("view");
                 const pTag = document.createElement("p");
-                pTag.innerText = adjustUnit(videoList[i].views) + " Views. " + calcDateDiff(videoList[i].upload_date);
+                pTag.innerText = `조회수 ${adjustUnit(videoList[i].views)}회 · ${calcDateDiff(videoList[i].upload_date)}`;
                 viewDiv.appendChild(pTag);
 
                 // titleNameViewImgDiv에 title, name, view 추가
