@@ -213,15 +213,15 @@
             <!-- 영상 정보, js에서 불러오기 -->
             <div class="videoDescFrame">
                 <div class="channelInfo">
-                    <a href="#">
-                        <img class="channelImg" alt="채널 프로필 사진">
+                    <!-- <a href="#"> -->
+                    <div>
+                        <a href="" id="profileLink"><img class="channelImg" alt="채널 프로필 사진"></a>
                         <div class="channelInfoDetail">
-                            <p id="channelName"></p>
-                            <span id="subscribers"></span>
+                            <a id="channelName">(채널명)Marcus Levin</a>
+                            <span id="subscribers">(구독자수)1.2M subscribers</span>
                         </div>
-                    </a>
-                    
-                    <!-- 구독버튼 -->
+                    </div>
+                    <!-- </a> -->
                     <div class="buttoncon">
                         <button onclick="changeImg()" class="button" id="sub">SUBSCRIBE</button>
                         <div style="display: none;" id="options">
@@ -264,6 +264,7 @@
                 <div class="add-comment">
                     <img src="images/User-Avatar.svg">
                     <input class="comment-text" type="text" placeholder="write comments..">
+                    <a href="" class="clclcl"></a>
                     <button class="posting" type="button">posting</button>
                 </div>
 
