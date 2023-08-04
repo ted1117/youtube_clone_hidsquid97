@@ -2,7 +2,7 @@
 
 body {
     background: #212121;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .wrap {

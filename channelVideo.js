@@ -59,7 +59,7 @@ function getVideoImg(id, playlistDesc) {
     let xhr = new XMLHttpRequest();
 
     // API 요청 설정
-    let apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${id}`;
+    let apiUrl = `https://oreumi.appspot.com/video/getVideoInfo?video_id=${id}`;
     xhr.open("GET", apiUrl, true);
 
     // 응답 처리 설정

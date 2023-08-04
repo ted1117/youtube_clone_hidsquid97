@@ -67,7 +67,7 @@
 .active .gone-menu {
     display: none;
 }
-.active a {
+.sidebar .active a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
