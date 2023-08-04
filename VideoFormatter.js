@@ -1,13 +1,16 @@
 // 조회수 단위 변경
 function adjustUnit(views) {
     if (views > 10000) {
-        return (views / 10000).toFixed(1) + "M";
+        const result = (views / 10000).toFixed(1);
+        return result.endsWith('.0') ? result.slice(0, -2) + "만" : result + "만";
     } else if (views > 1000) {
-        return (views / 1000).toFixed(1) + "K";
+        const result = (views / 1000).toFixed(1);
+        return result.endsWith('.0') ? result.slice(0, -2) + "천" : result + "천";
     } else {
         return views;
     }
 }
+
 
 // 업로드 일자 기간 계산
 function calcDateDiff(date) {

@@ -157,7 +157,7 @@ function clearContainer() {
 // *****************************
 
 // API 요청 설정
-const apiUrl = `http://oreumi.appspot.com/video/getVideoList`;
+const apiUrl = `https://oreumi.appspot.com/video/getVideoList`;
 const vidInfoUrl = `https://storage.googleapis.com/oreumi.appspot.com/`;
 
 // 모든 영상 불러오기
