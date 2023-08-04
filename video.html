@@ -19,7 +19,7 @@
 
 <body>
     <header class="navi">
-        <div class="hamburger" id="hamburger1">
+        <div class="hamburger">
             <img src="images/hamburger.svg">
         </div>
         <a class="yt-button" href="./index.html">
@@ -28,10 +28,10 @@
 
         <div class="search-Box">
             <div class="search-border">
-                <input type="text" placeholder="Search">
+                <input id="searchInput" type="text" placeholder="Search">
             </div>
             <button>
-                <img src="images/search.svg" class="search-icon">
+                <img id="searchBtn" src="images/search.svg" class="search-icon">
             </button>
             <img src="images/mic.svg" class="mic-icon">
         </div>
@@ -252,29 +252,16 @@
                         listening to hundreds of hours of YouTube videos
                         and experimenting in his workshop. Now he’s a YouTube creator himself, sells his products
                         worldwide, and does
-                        demonstrations all around the country.</p>
-
+                        demonstrations all around the country.
+                    </p>
                 </div>
                 <hr>
 
-
             </div>
-            <!-- <div class="comments">
-                <h4>3 Comments</h4>
-                <div class="add-comment">
-                    <img src="images/User-Avatar.svg">
-                    <input class="comment-text" type="text" placeholder="write comments..">
-                    <button class="posting" type="button">posting</button>
-                </div>
 
-                <div class="comment-container">
-                </div>
-            </div> -->
             <div class="comments">
                 <div class="connect_But">
-                    <div class="font-size">
-                        <h2>3Comments</h2>
-                    </div>
+                    <h2>3Comments</h2>
                     <div class="img-color">
                         <img src="images\sort-logo.svg">
                     </div>
@@ -296,105 +283,10 @@
         <div class="secondary">
             <div>
                 <div class="top-menu">
-                    <button>All</button>
+                    <button class="allChannel">All</button>
                     <button class="channel"></button>
                     <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
-                    </div>
-
-                    <div class="secondary-video-list">
-                        <a href="" class="small-thumbnail">
-                            <img src="images/image 1.svg" alt="">
-                        </a>
-                        <div class="secondary-vid-info">
-                            <a href="">video title</a>
-                            <p>channel name</p>
-                            <p>10k Views</p>
-                        </div>
+                        <!-- js에서 불러오기 -->
                     </div>
                 </div>
             </div>
