@@ -13,8 +13,6 @@ function commentForm() {
   const userImg = document.createElement('img');
   const mainComment = document.createElement('p');
   const likeAction = document.createElement('div');
-  const likeImg = document.createElement('img');
-  const disLikeImg = document.createElement('img');
 
   userImg.classList.add('comment_img')
   mainComment.classList.add('comment_main')
@@ -95,6 +93,8 @@ function createCommentItem(commentObj) {
   const content_item = document.createElement('div');
   const commentContent = document.createElement('p');
   const likeAction = document.createElement('div');
+  const likeBtn = document.createElement('a');
+  const dislikeBtn = document.createElement('a');
   const likeImg = document.createElement('img');
   const dislikeImg = document.createElement('img');
   const authorSpan = document.createElement('span');
@@ -104,7 +104,9 @@ function createCommentItem(commentObj) {
   likeAction.classList.add('like-action');
   commentItem.classList.add('comment_all_container')
   content_item.classList.add('comment-item');
-  likeAction.classList.add('like-action');
+  likeBtn.classList.add('likeBtn');
+  dislikeBtn.classList.add('dislikeBtn');
+
   userImg.setAttribute('src', 'images/User-Avatar.svg');
   commentContent.innerText = commentObj.content;
   likeImg.setAttribute('src', 'images/liked.svg');
@@ -113,10 +115,12 @@ function createCommentItem(commentObj) {
   authorSpan.innerText = commentObj.author;
   timestampSpan.innerText = commentObj.timestamp;
 
-  likeAction.appendChild(likeImg);
-  likeAction.innerHTML += '<span>' + commentObj.likes + ' </span>';
-  likeAction.appendChild(dislikeImg);
-  likeAction.innerHTML += '<span>' + commentObj.dislikes + ' </span>';
+  likeBtn.appendChild(likeImg);
+  likeAction.appendChild(likeBtn);
+  likeAction.innerHTML += '<span class="likeSpan">' + commentObj.likes + ' </span>';
+  dislikeBtn.appendChild(dislikeImg);
+  likeAction.appendChild(dislikeBtn);
+  likeAction.innerHTML += '<span class="dislikeSpan">' + commentObj.dislikes + ' </span>';
   likeAction.innerHTML += '<span>' + 'REPLY' + '</span>';
 
   commentItem.appendChild(userImg);
@@ -135,7 +139,7 @@ function createCommentItem(commentObj) {
 function createCommentObj(author, content) {
   const timestamp = new Date(); // 현재 시간을 문자열로 변환하여 타임스탬프로 사용
 
-  const commentObj = {
+  let commentObj = {
     author: author,
     timestamp: timestamp,
     content: content,
@@ -146,9 +150,6 @@ function createCommentObj(author, content) {
 
   return commentObj;
 }
-
-
-
 
 function calcDateDiff(date) {
   const start = new Date(date);
@@ -174,9 +175,5 @@ function calcDateDiff(date) {
   return '방금 전';
 }
 
-
-
-
 // 초기화면에 코멘트 목록 보여주기
 showComments();
-
