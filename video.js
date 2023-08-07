@@ -1,6 +1,11 @@
 let urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get('id');
 
+// 각종 변수들
+// let targetTagList;
+// let videoInfoList = await getVideoList();
+let targetVideoId = id;
+
 // 영상 정보 불러오기
 function createVideoItem(id) {
     // XMLHttpRequest 객체 생성
@@ -33,6 +38,8 @@ function createVideoItem(id) {
                 // <video controls autoplay>
                 //     <source src="" type="video/mp4">
                 // </video>
+
+                targetTagList = response.video_tag;
 
                 // 영상
                 const videoElement = document.createElement("video");
@@ -130,22 +137,119 @@ async function getVideoList() {
     }
 }
 
+// getVideoInfo API
+async function getVideoInfo(video_id) {
+    const apiURL = `https://oreumi.appspot.com/video/getVideoInfo?video_id=${video_id}`;
+
+    try {
+        const response = await fetch(apiURL);
+
+        if (!response.ok) {
+            throw new Error("네트워크 응답이 올바르지 않습니다.");
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("데이터를 불러오는 중 오류 발생:", error);
+        return null;
+    }
+}
+
+async function getSimilarity(firstWord, secondWord) {
+    const openApiURL = "http://aiopen.etri.re.kr:8000/WiseWWN/WordRel";
+    const access_key = "f7f1a351-b530-4e0a-bb13-bb68a594f301 ";
+
+    let requestJson = {
+        argument: {
+            first_word: firstWord,
+            second_word: secondWord,
+        },
+    };
+
+    let response = await fetch(openApiURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: access_key,
+        },
+        body: JSON.stringify(requestJson),
+    });
+    let data = await response.json();
+    return data.return_object["WWN WordRelInfo"].WordRelInfo.Distance;
+}
+
+async function calculateVideoSimilarities(videoList, targetTagList) {
+    let filteredVideoList = [];
+
+    for (let video of videoList) {
+        let totalDistance = 0;
+        let promises = [];
+
+        for (let videoTag of video.video_tag) {
+            for (let targetTag of targetTagList) {
+                if (videoTag == targetTag) {
+                    promises.push(0);
+                } else {
+                    promises.push(getSimilarity(videoTag, targetTag));
+                }
+            }
+        }
+
+        let distances = await Promise.all(promises);
+
+        for (let distance of distances) {
+            if (distance !== -1) {
+                totalDistance += distance;
+            }
+        }
+
+        if (totalDistance !== 0) {
+            if (targetVideoId !== video.video_id) {
+                filteredVideoList.push({ ...video, score: totalDistance });
+            }
+        }
+    }
+
+    filteredVideoList.sort((a, b) => a.score - b.score);
+
+    filteredVideoList = filteredVideoList.map((video) => ({
+        ...video,
+        score: 0,
+    }));
+    return filteredVideoList;
+}
+
 // 추천 영상 목록 구성
 async function renderVideoList() {
     const topMenu = document.querySelector(".top-menu");
     try {
         const data = await getVideoList();
+        const currentVideoInfo = await getVideoInfo(id);
+        let tagList = currentVideoInfo.video_tag;
+        let channelName = currentVideoInfo.video_channel;
+        let targetTagList = currentVideoInfo.video_tag; //현재 비디오 태그
 
-        for (i in data) {
+        let videoInfoPromises = data.map((video) =>
+            getVideoInfo(video.video_id)
+        );
+        let videoInfoList = await Promise.all(videoInfoPromises);
 
-            if (id == i) {
-                // 현재 동영상은 추천 영상 목록에서 제외
-                continue;
-            }
+        let filteredVideoList = await calculateVideoSimilarities(
+            videoInfoList,
+            targetTagList
+        );
+
+        for (let i = 0; i < 5; i++) {
+            let video = filteredVideoList[i];
+            let channelTitle = video.video_channel;
+            let videoURL = `./video.html?id=${video.video_id}`;
+            let channelURL = `./channel.html?channelName=${channelTitle}`;
+
             // 영상 틀
             const secVidList = document.createElement("a");
             secVidList.classList.add("secondary-video-list");
-            secVidList.href = `./video.html?id=${data[i].video_id}`;
+            secVidList.href = `${videoURL}`;
             secVidList.style.textDecoration = "none";
 
             // 영상 썸네일 틀
@@ -154,7 +258,7 @@ async function renderVideoList() {
 
             // 영상 썸네일 이미지
             const thumbnailImg = document.createElement("img");
-            thumbnailImg.src = `https://storage.googleapis.com/oreumi.appspot.com/img_${data[i].video_id}.jpg`;
+            thumbnailImg.src = `${video.image_link}`;
 
             // 영상 정보 틀
             const vidInfo = document.createElement("div");
@@ -162,15 +266,15 @@ async function renderVideoList() {
 
             // 영상 제목
             const vidTitle = document.createElement("a");
-            vidTitle.textContent = data[i].video_title;
+            vidTitle.textContent = video.video_title;
 
             // 채널 이름
             const channelName = document.createElement("p");
-            channelName.textContent = `${data[i].video_channel}`;
+            channelName.textContent = `${channelTitle}`;
 
             // 조회수 + 업로드 일자
             const vidViews = document.createElement("p");
-            vidViews.textContent = `조회수 ${adjustUnit(data[i].views)}회 · ${calcDateDiff(data[i].upload_date)}`;
+            vidViews.textContent = `조회수 ${adjustUnit(video.views)}회 · ${calcDateDiff(video.upload_date)}`;
 
             vidInfo.appendChild(vidTitle);
             vidInfo.appendChild(channelName);
@@ -183,7 +287,6 @@ async function renderVideoList() {
 
             topMenu.appendChild(secVidList);
         }
-
 
     } catch (error) {
         console.error("비디오 목록을 가져오는 중 오류 발생: ", error);
