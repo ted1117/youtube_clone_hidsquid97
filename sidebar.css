@@ -65,6 +65,13 @@
     display: block;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.sidebar.active .top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sidebar.active .menu .top a:first-of-type {
