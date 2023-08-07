@@ -14,7 +14,7 @@ function changeImg() {
 
         // 알림 아이콘 추가
         let notiIcon = document.createElement("img");
-        notiIcon.setAttribute("src", "images/Video/Vector.svg");
+        notiIcon.setAttribute("src", "images/Subscribe/notifications.svg");
         notiIcon.classList.add("bellsvg");
         notiIcon.setAttribute("id", "notiIcon");
         btn.prepend(notiIcon);
