@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var wrap = document.querySelector("#wrap2");
     var moreButton = document.getElementById("moreButton2");
     var collButton = document.getElementById("collButton2");
-    var plIcons = document.querySelectorAll('.pl-icon');
-    var plIconCount = plIcons.length;
+    
+    // 마지막 더보기 child 제외한 자식노드들의 개수
+    var plIconCount = moreButton.childNodes.length -1;
     var isExpanded = false
 
     moreButton.querySelector('p').textContent = `Show ${plIconCount} more`;
