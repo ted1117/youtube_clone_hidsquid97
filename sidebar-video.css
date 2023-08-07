@@ -23,12 +23,19 @@
     overflow-y: scroll;
 }
 
+#sidebar-header a {
+    padding-left: 0px;
+}
+
 .sidebar a {
     color: #fff;
     display: flex;
     padding: 5%;
     padding-left: 8px;
     margin-left: 8px;
+    /* 다른 부분 */
+    padding-left: 16px;
+
     text-decoration-line: none;
     align-items: center;
 }
@@ -81,7 +88,7 @@
 #hamburger2 {
     display: flex;
     padding: 8px;
-    margin: 8px;
+    margin: 16px;
     align-items: flex-start;
     gap: 10px;
 }
