@@ -88,8 +88,37 @@ function getVideoImg(id, playlistDesc) {
                 playThumbnail.setAttribute('src', response.image_link);
                 playThumbnail.classList.add("playThumbnail");
 
+                // 새로운 video 요소 생성
+                const videoElement = document.createElement("video");
+                videoElement.classList.add("video");
+                videoElement.setAttribute("controls", true);
+                videoElement.setAttribute("src", `https://storage.googleapis.com/oreumi.appspot.com/video_${response.video_id}.mp4`);
+                videoElement.setAttribute("preload", "metadata"); // Load only metadata to get video duration
+                videoElement.muted = true;
+
+                // 비디오 재생 관련 이벤트 추가
+                tagA.addEventListener('mouseenter', () => {
+                    setTimeout(() => {
+                        playlistVideo.classList.add('active');
+                        playThumbnail.style.display = "none";
+                        videoElement.style.display = "block";
+                        videoElement.play();
+                    }, 300); // 0.3초 딜레이 추가 (300ms)
+                });
+
+                tagA.addEventListener('mouseleave', () => {
+                    setTimeout(() => {
+                        playlistVideo.classList.remove('active');
+                        videoElement.style.display = "none";
+                        playThumbnail.style.display = "block";
+                        videoElement.pause();
+                        videoElement.currentTime = 0;
+                    }, 300); // 0.3초 딜레이 추가 (300ms)
+                });
+
                 // 추가
                 tagA.appendChild(playThumbnail);
+                tagA.appendChild(videoElement);
                 tagA.appendChild(playlistDesc);
                 playlistVideo.appendChild(tagA);
                 document.querySelector(".contentsList").appendChild(playlistVideo);

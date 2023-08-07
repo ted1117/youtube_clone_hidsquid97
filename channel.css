@@ -307,6 +307,13 @@ main {
 .playThumbnail {
     width: 210px;
     height: 118px;
+    border-radius: 10px;
+}
+
+.playlistVideo .video {
+    width: 210px;
+    height: 118px;
+    display: none;
 }
 
 .playlistDesc {
