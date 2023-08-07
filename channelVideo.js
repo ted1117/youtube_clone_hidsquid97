@@ -102,7 +102,7 @@ function getVideoImg(id, playlistDesc) {
 
 // getVideoInfo API
 async function getVideoInfo(video_id) {
-    const apiURL = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${video_id}`;
+    const apiURL = `https://oreumi.appspot.com/video/getVideoInfo?video_id=${video_id}`;
 
     try {
         const response = await fetch(apiURL);
@@ -149,4 +149,4 @@ async function showFeaturedVideo(video_id) {
     videoDescText.textContent = `${data.video_detail}`;
 }
 
-showFeaturedVideo();
+// showFeaturedVideo();
