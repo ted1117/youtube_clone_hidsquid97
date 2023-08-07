@@ -9,15 +9,17 @@
     color: #f1f1f1;
     float: left;
     width: 240px;
-    height: 100vh;
+    height: calc(100% - 56px);
     font-family: 'Roboto';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     align-items: flex-start;
-    /* 230801 */
+
     overflow-y: auto;
+    position: fixed;
+    top: 56px;
 }
 
 .top a:first-child {
@@ -58,33 +60,34 @@
 }
 
 /* 햄버거 활성화시 */
-.active {
-    width: 100px;
+.sidebar.active {
+    width: 75px;
     display: block;
     justify-content: center;
     align-items: center;
 }
-.active .gone-menu {
+
+.sidebar.active .menu .top a:first-of-type {
+    padding-top: 12px;
+}
+
+.sidebar.active .gone-menu {
     display: none;
 }
-.sidebar .active a {
+.sidebar.active a {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 1rm;
+    padding-left: 0;
 }
-.active p {
-    margin-left: 0;
-}
-.top a {
-    padding: 10px;
-}
-.active p {
+
+.active .top p {
     margin-left: 0;
 }
 
 
-/*  */
 .sidebar a:hover {
     background: #303030;
 }
