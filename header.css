@@ -26,6 +26,8 @@ header img:hover {
     margin: 8px;
     align-items: flex-start;
     gap: 10px;
+    /* 다른 부분 */
+    margin-left: 16px;    
 }
 
 .hamburger:hover {
@@ -120,4 +122,15 @@ header img:hover {
 .profile>img:nth-child(4) {
     width: 32px;
     height: 32px;
+    margin-right: 16px;
+}
+
+.search-border {
+    border: 2px solid rgb(51, 49, 49);
+    display: flex;
+}
+
+.search-border input {
+    color: #FFF;
+    padding-left: 3%;
 }

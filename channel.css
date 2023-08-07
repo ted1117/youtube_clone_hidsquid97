@@ -1,36 +1,41 @@
 body {
-    background: #212121;
+    background: var(--black, #000);
+    font-family: Roboto;
+    line-height: normal;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 .wrap {
     display: flex;
     position: absolute;
-    top: 64px;
+    top: 56px;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
 }
 
 main {
     background-color: #000000;
-    flex: 1;
     overflow-y: auto;
+
+    position: absolute;
+    left: 240px;
+
+    width: calc(100% - 240px);
+    overflow-x: hidden;
+
 }
 
 /* Banner */
 .banner {
     display: flex;
-    width: 880px;
-    height: 192px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+    width: 100%;
 }
 
 .banner img {
-    width: 1200px;
-    height: 192px;
-    flex-shrink: 0;
+    width: 100%;
 }
 
 /* Channel Title */
@@ -57,11 +62,6 @@ main {
 }
 
 .channelProfilePic {
-    /* width: 104px;
-    display: flex;
-    padding-right: 0px;
-    align-items: flex-start;
-    gap: 10px; */
     display: flex;
     padding-right: 24px;
     align-items: flex-start;
@@ -130,10 +130,18 @@ main {
 .toolbars a {
     display: inline-flex;
     padding: 16px 32px 15px 32px;
+    color: #AAA;
 }
 
 .toolbars a:hover {
+    /* border-bottom: 1px solid #AAA; */
+    cursor: pointer;
+    color: #F1F1F1;
+}
+
+.toolbars a:first-child {
     border-bottom: 1px solid #AAA;
+    color: #F1F1F1;
 }
 
 .toolbarSearch {
@@ -234,6 +242,7 @@ main {
     padding: 0px 65px;
     flex-direction: column;
     align-items: flex-start;
+    width: calc(100% - 130px);
 }
 
 .playlistHeader {
@@ -277,9 +286,12 @@ main {
 }
 
 .contentsList {
-    display: flex;
-    padding: 24px 0px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    width: 100%;
 }
 
 .playlistVideo {
@@ -288,6 +300,8 @@ main {
     padding-right: 4px;
     flex-direction: column;
     align-items: flex-start;
+
+    float: left;
 }
 
 .playThumbnail {
@@ -325,30 +339,6 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* aside와 main을 가로로 배열하기 위한 컨테이너 스타일 */
-.wrap {
-    display: flex;
-    /* overflow-y: auto;  */
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* aside 영역 스타일 */
-aside {
-    overflow-y: auto;
 }
 
 .plVideoInfo {

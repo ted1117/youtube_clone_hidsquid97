@@ -142,7 +142,7 @@ video {
     width: 100%;
 }
 
-.channelInfo > div {
+.channelInfo > div:first-child {
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -414,13 +414,14 @@ video {
     align-items: flex-start;
 }
 
-.top-menu button:first-child {
+/* .top-menu button:first-child {
     background-color: white;
     color: #212121;
-}
+} */
 
 .top-menu button:hover {
     background-color: #000;
+    cursor: pointer;
 }
 
 .top-menu button:focus {

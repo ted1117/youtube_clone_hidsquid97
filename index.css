@@ -1,7 +1,11 @@
 /* Main Page */
 
 body {
-    background: #212121;
+    background: var(--black, #000);
+    font-family: Roboto;
+    line-height: normal;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 .wrap {
@@ -11,12 +15,34 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    /* 230805 */
+    /* width: 100vw; */
+    width: 100%;
+}
+
+section {
+    position: absolute;
+    left: 240px;
+    /* width: 100%; */
+    width: calc(100% - 240px);
 }
 
 /* nav */
 .top-menu {
-    margin-left: 2px;
     background-color: #212121;
+    width: calc(100% - 240px);
+    height: 56px;
+    position: fixed;
+    top: 56px;
+    white-space: nowrap;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+}
+
+.top-menu>div {
+    padding-left: 2%;
 }
 
 .top-menu button {
@@ -43,10 +69,12 @@ body {
 .top-menu button:first-child {
     background-color: white;
     color: #212121;
+    margin-left: 0px;
 }
 
 .top-menu button:hover {
     background-color: #000;
+    cursor: pointer;
 }
 
 .top-menu button:focus {
@@ -54,28 +82,25 @@ body {
     color: #303030;
 }
 
-section {
-    width: 100%;
-}
-
 .container {
-    /* width: 100vh; */
-    background: #000;
-    /*테스트용 컬러*/
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    width: 96%;
+    position: absolute;
+    top: 56px;
 }
 
 .container-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-column-gap: 16px;
     grid-row-gap: 30px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 
-    overflow-y: auto;
+    overflow: auto;
 }
 
 
@@ -87,26 +112,6 @@ section {
     right: 70px;
 }
 
-.thumbnail {
-    display: flex;
-    width: 276px;
-    height: 155px;
-    padding-bottom: 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 10px;
-
-}
-
-/* .video-info {
-    display: flex;
-    width: 204px;
-    flex-direction: column;
-    align-items: flex-start;
-    color: white;
-} */
-
 .title {
     color: white;
     text-decoration: none;
@@ -117,6 +122,7 @@ section {
     font-weight: 700;
     line-height: normal;
     white-space: nowrap;
+    margin-top: 12px;
 }
 
 .view {
@@ -142,22 +148,28 @@ section {
     line-height: normal;
 }
 
-.title-image {
+
+
+.title-name-view-img {
+    /* width: 252px; */
+    align-items: flex-start;
+}
+
+.title-name-view-img>a {
+    display: flex;
+    padding: 12px 12px 26px 0px;
+    align-items: flex-start;
+    gap: 10px;
     float: left;
+}
+
+.title-image {
     display: flex;
     width: 36px;
     height: 36px;
     justify-content: center;
     align-items: center;
-    display: flex;
-    padding: 0px 12px 26px 0px;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.title-name-view-img {
-    padding-top: 12px;
-    align-items: flex-start;
+    border-radius: 50%;
 }
 
 a {
@@ -166,8 +178,10 @@ a {
 }
 
 .video {
-    width: 276px;
-    height: 155px;
+    /* width: 276px;
+    height: 155px; */
+    width: 100%;
+    aspect-ratio: 1000 / 561;
     border-radius: 0;
     /* 초기값: 모서리가 없는 상태 */
     display: none;
@@ -191,13 +205,35 @@ a {
 
 .item {
     display: flex;
+    /* width: 276px;
+        height: 247px;
+        padding-bottom: 0px; */
     flex-direction: column;
+    /* align-items: flex-start;
+        flex-shrink: 0; */
+}
+
+/* .item > a {
+    display: flex;
+        width: 276px;
+        height: 247px;
+        padding-bottom: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+} */
+
+.item-info {
+    width: 276px;
+    height: 74px;
 }
 
 .thumbnail {
     display: flex;
-    width: 276px;
-    height: 155px;
+    /* width: 276px;
+    height: 155px; */
+    width: 100%;
+    height: auto;
     padding-bottom: 0px;
     flex-direction: column;
     align-items: flex-start;
@@ -209,11 +245,10 @@ a {
 
 .video-info {
     display: flex;
-    width: 204px;
+    width: 252px;
     flex-direction: column;
     align-items: flex-start;
     color: white;
+    /* 다른 부분 */
+    margin-top: 12px
 }
-
-
-
