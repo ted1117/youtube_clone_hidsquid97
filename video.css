@@ -1,5 +1,4 @@
 /* Video Page */
-/* wrap 위치 수정 필요: 절반 사이즈로 화면 축소 시 비디오 창 시작 위치가 이상하게 나옴 */
 
 body {
     background-color: #181818;
@@ -186,33 +185,6 @@ video {
     font-weight: 400;
     line-height: normal;
 }
-
-/* .buttoncon {
-    display: flex;
-    width: 124px;
-    padding: 7px 4px 8px 4px;
-    margin: auto 0px 0px auto;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.button {
-    display: flex;
-    padding: 10px 16px;
-    align-items: flex-start;
-    gap: 10px;
-
-    border-radius: 2px;
-    background: #C00;
-
-    color: var(--white-color, #FFF);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-} */
 
 .videoDesc {
     display: flex;
@@ -414,10 +386,10 @@ video {
     align-items: flex-start;
 }
 
-/* .top-menu button:first-child {
+.top-menu button:first-child {
     background-color: white;
     color: #212121;
-} */
+}
 
 .top-menu button:hover {
     background-color: #000;
