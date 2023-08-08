@@ -133,4 +133,5 @@ header img:hover {
 .search-border input {
     color: #FFF;
     padding-left: 3%;
+    outline: none;
 }
