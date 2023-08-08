@@ -2,6 +2,9 @@
 
 body {
     background-color: #181818;
+    background: var(--black, #000);
+    font-family: Roboto;
+    line-height: normal;
 }
 
 .wrap {
@@ -175,6 +178,7 @@ video {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-decoration: none;
 }
 
 #subscribers {
