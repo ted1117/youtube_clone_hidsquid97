@@ -69,7 +69,7 @@ function createVideoItem(id) {
                     const subscribers = document.getElementById("subscribers");
                     const channelImg = document.querySelector(".channelImg");
                     const channelImgLink = document.getElementById("profileLink");
-                    subscribers.textContent = `${subsCount} subscribers`;
+                    subscribers.textContent = `구독자 ${subsCount}명`;
                     channelImg.src = channelPic;
                     channelImgLink.href = `channel.html?video_channel=${channelTitle}`
                 });
@@ -221,7 +221,7 @@ async function calculateVideoSimilarities(videoList, targetTagList) {
 }
 
 // 추천 영상 목록 구성
-async function renderVideoList() {
+async function getRecList() {
     const topMenu = document.querySelector(".top-menu");
     try {
         const data = await getVideoList();
@@ -248,7 +248,7 @@ async function renderVideoList() {
 
             // 영상 틀
             const secVidList = document.createElement("a");
-            secVidList.classList.add("secondary-video-list");
+            secVidList.classList.add("secondary-rec-video-list");
             secVidList.href = `${videoURL}`;
             secVidList.style.textDecoration = "none";
 
@@ -286,12 +286,83 @@ async function renderVideoList() {
             secVidList.appendChild(vidInfo);
 
             topMenu.appendChild(secVidList);
+
+            secVidList.style.display = "none";
         }
 
     } catch (error) {
         console.error("비디오 목록을 가져오는 중 오류 발생: ", error);
     }
 }
+
+async function renderVideoList() {
+    const topMenu = document.querySelector(".top-menu");
+    try {
+        const data = await getVideoList();
+
+        for (i in data) {
+
+            if (id == i) {
+                // 현재 동영상은 추천 영상 목록에서 제외
+                continue;
+            }
+            // 영상 틀
+            const secVidList = document.createElement("a");
+            secVidList.classList.add("secondary-video-list");
+            secVidList.href = `./video.html?id=${data[i].video_id}`;
+            secVidList.style.textDecoration = "none";
+
+            // 영상 썸네일 틀
+            const smallThumbnail = document.createElement("a");
+            smallThumbnail.classList.add("small-thumbnail");
+
+            // 영상 썸네일 이미지
+            const thumbnailImg = document.createElement("img");
+            thumbnailImg.src = `https://storage.googleapis.com/oreumi.appspot.com/img_${data[i].video_id}.jpg`;
+
+            // 영상 정보 틀
+            const vidInfo = document.createElement("div");
+            vidInfo.classList.add("secondary-vid-info");
+
+            // 영상 제목
+            const vidTitle = document.createElement("a");
+            vidTitle.textContent = data[i].video_title;
+
+            // 채널 이름
+            const channelName = document.createElement("p");
+            channelName.textContent = `${data[i].video_channel}`;
+
+            // 조회수 + 업로드 일자
+            const vidViews = document.createElement("p");
+            vidViews.textContent = `조회수 ${adjustUnit(data[i].views)}회 · ${calcDateDiff(data[i].upload_date)}`;
+
+            vidInfo.appendChild(vidTitle);
+            vidInfo.appendChild(channelName);
+            vidInfo.appendChild(vidViews);
+
+            smallThumbnail.appendChild(thumbnailImg);
+
+            secVidList.append(smallThumbnail);
+            secVidList.appendChild(vidInfo);
+
+            topMenu.appendChild(secVidList);
+        }
+
+
+    } catch (error) {
+        console.error("비디오 목록을 가져오는 중 오류 발생: ", error);
+    }
+}
+
+function showRecList() {
+    // const recVideos = document.getElementsByClassName("secondary-rec-video-list");
+    const recVideos = document.querySelectorAll(".secondary-rec-video-list");
+
+    recVideos.forEach(container => {
+        container.style.display = "flex";
+    });
+}
+
 
 // 현재 채널의 영상만 보이기
 function hideVideos(title) {
@@ -301,7 +372,7 @@ function hideVideos(title) {
         const pElement = container.querySelector(".secondary-vid-info p:nth-child(2)");
         const channelName = pElement.textContent.trim();
 
-        if (channelName !== title) {
+        if (channelName !== title || channelName == "all") {
             container.style.display = "none";
         }
     });
@@ -324,11 +395,14 @@ let channelTitle;
 createVideoItem(id);
 
 // 추천 영상 목록
+// showRecList();
 renderVideoList();
+getRecList();
 
 // 추천 영상 목록에서 채널 별 필터링
 const allChannel = document.querySelector(".allChannel");
 const currnetChannel = document.querySelector(".channel");
+const recVideos = document.querySelector(".recommended");
 
 // allChannel 클릭 시 현재 영상을 제외한 모든 영상 보이기
 allChannel.addEventListener("click", function () {
@@ -337,5 +411,11 @@ allChannel.addEventListener("click", function () {
 
 // channel 클릭 시 현재 영상과 동일한 채널의 영상만 보이기
 currnetChannel.addEventListener("click", function () {
+    showAllVideos();
     hideVideos(channelTitle);
+});
+
+recVideos.addEventListener("click", function () {
+    hideVideos(all);
+    showRecList();
 });
