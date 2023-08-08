@@ -246,7 +246,7 @@ video {
     gap: 4px;
 
     font-size: 14px;
-    background-color: #181818;
+    background-color: black;
     border: none;
     border-bottom: 1px solid #303030;
     color: #AAA;
@@ -412,7 +412,7 @@ video {
     padding-bottom: 0px;
     align-items: flex-start;
     margin-left: 10px;
-    line-height: 20px;
+    /* line-height: 20px; */
 }
 
 .comment-item>h3>span:nth-child(2) {
@@ -429,13 +429,13 @@ video {
 
 .comment_img {
     display: flex;
-    width: 60px;
-    height: 60px;
-    justify-content: center;
+    width: 40px;
+    height: 40px;
+    justify-content: top;
     align-items: center;
     display: inline-block;
     vertical-align: top;
-    border-radius: 30px;
+    border-radius: 50%;
 }
 
 .comment_main {
@@ -449,7 +449,7 @@ video {
 .comment_all_container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     margin: 10px;
 }
 
@@ -484,3 +484,11 @@ video {
     flex-shrink: 0;
 }
 
+.like-action {
+    gap: 5px;
+    color: #AAA;
+}
+
+#wrap2 img {
+    border-radius: 50%;
+}
