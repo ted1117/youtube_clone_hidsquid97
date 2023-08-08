@@ -465,16 +465,14 @@ video {
     padding: 20px 6px;
 }
 
-.img-color {
-    padding: 4px 0;
-}
-
 .sortbyBut {
-    border: 0;
-    outline: 0;
+    border: none;
     color: white;
-    background-color: #181818;
-    text-align: left;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    font-weight: inherit;
+    justify-content: space-between;
 }
 
 .channelImg {
