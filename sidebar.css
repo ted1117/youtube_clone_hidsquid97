@@ -41,6 +41,11 @@ a {
     text-decoration-line: none;
     align-items: center;
 }
+
+.sidebar a:not(.footer a):hover {
+    background-color: #303030;
+}
+
 .sidebar p {
     margin-left: 20px;
 }
