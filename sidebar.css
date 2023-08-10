@@ -4,8 +4,12 @@
     display: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .sidebar {
-    background: #212121;
+    background: #0f0f0f;
     color: #f1f1f1;
     float: left;
     width: 240px;
@@ -16,21 +20,24 @@
     font-weight: 400;
     line-height: normal;
     align-items: flex-start;
+    overflow: hidden;
 
     overflow-y: auto;
     position: fixed;
     top: 56px;
 }
 
-.top a:first-child {
-    margin-top: 10px;
+.menu > div:not(.footer) {
+    padding: 12px;
+    padding-right: 20px;
 }
 
-.sidebar a {
+.sidebar a:not(.footer a) {
     color: #fff;
     display: flex;
-    padding: 5%;
-    padding-left: 10%;
+    width: 180px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 10px;
     text-decoration-line: none;
     align-items: center;
 }
@@ -59,50 +66,90 @@
     color: #AAA;
 }
 
+.inner-border {
+    margin-left: 12px;
+    background-color: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* 햄버거 활성화시 */
-.sidebar.active {
-    width: 75px;
+.miniSidebar {
     display: block;
-    justify-content: center;
-    align-items: center;
+    visibility: hidden;
+    background-color: #0f0f0f;
+    width: 72px;
+    height: calc(100% - 56px);
+
     overflow: hidden;
+    position: fixed;
+    top: 56px;
 }
 
-.sidebar.active .top {
+.miniMenu {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 20px; */
+    margin-top: 4px;
+    padding: 0 4px;
 }
 
-.sidebar.active .menu .top a:first-of-type {
-    padding-top: 12px;
-}
-
-.sidebar.active .gone-menu {
-    display: none;
-}
-.sidebar.active a {
+.miniSidebar a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1rm;
-    padding-left: 0;
+
+    padding: 16px 0 14px 0;
+    border-radius: 10px;
+    width: 64px;
 }
 
-.active .top p {
+.miniSidebar a:hover {
+    background-color: #303030;
+}
+
+.miniSidebar p {
     margin-left: 0;
+    max-width: 100%;
+    display: block;
+    max-height: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4rem;
 }
 
-
-.sidebar a:hover {
-    background: #303030;
+#guide-links-primary,
+#guide-links-secondary {
+    padding: 16px 24px 0;
 }
 
-.sidebar a:focus {
-    background: #303030;
+#guide-links-primary > a,
+#guide-links-secondary > a {
+    display: inline-block;
+    text-align: none;
+    color: #AAA;
+    font-size: 1.3rem;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    line-height: 13px;
+
+    padding: 0px;
+    margin-right: 8px;
 }
 
+#copyright {
+    padding: 16px 24px;
+    color: #606060;
+    font-size: 1.2rem;
+    font-size: 12px;
+    line-height: 1.8rem;
+    line-height: 18px;
+    font-weight: 400;
+}
 .credit {
     color: var(--gray-color, #AAA);
     font-size: 13px;
