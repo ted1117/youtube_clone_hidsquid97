@@ -63,7 +63,7 @@ section {
     /* Style */
     border-radius: 8px;
     border: 0px solid #AAA;
-    background: #303030;
+    background: #272727;
 
     /* Font */
     color: #FFF;
@@ -80,8 +80,9 @@ section {
 }
 
 .top-menu button:hover {
-    background-color: #000;
+    background-color: #3f3f3f;
     cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
 }
 
 .top-menu button:focus {
