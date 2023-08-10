@@ -1,8 +1,9 @@
 /* Main Page */
 
 body {
-    background: var(--black, #000);
+    background: #0f0f0f;
     font-family: Roboto;
+    font-size: 10px;
     line-height: normal;
     overflow-x: hidden;
     width: 100vw;
@@ -35,7 +36,7 @@ section {
 
 /* nav */
 .top-menu {
-    background-color: #212121;
+    background-color: #0f0f0f;
     width: calc(100% - 240px);
     height: 56px;
     position: fixed;
@@ -60,8 +61,8 @@ section {
     align-items: flex-start;
 
     /* Style */
-    border-radius: 32px;
-    border: 0.3px solid #AAA;
+    border-radius: 8px;
+    border: 0px solid #AAA;
     background: #303030;
 
     /* Font */
@@ -89,12 +90,12 @@ section {
 }
 
 .container {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
 
-    width: 96%;
+    width: 97.661%;
     position: absolute;
     top: 56px;
 }
@@ -121,12 +122,14 @@ section {
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    line-height: 20px;
     white-space: nowrap;
     margin-top: 12px;
+    margin-bottom: 6px;
 }
 
 .view {
@@ -237,6 +240,4 @@ a {
     flex-direction: column;
     align-items: flex-start;
     color: white;
-    /* 다른 부분 */
-    margin-top: 12px
 }
