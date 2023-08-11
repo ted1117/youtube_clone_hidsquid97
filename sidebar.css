@@ -55,25 +55,29 @@ a {
     height: 24px;
     border-radius: 50%;
 }
-.sidebar hr {
+
+.sidebar h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 6px 12px 4px 12px;
+    color: #f1f1f1;
+}
+
+.inner-border {
+    width: calc(100% - 24px);
+    border: 0;
+    height: 1px;
+    margin: 0 12px;
+    background-color: #303030;
+}
+
+.outer-border {
     width: 100%;
     border: 0;
     height: 1px;
     background: #303030;
-}
-
-.sidebar h3 {
-    font-weight: 700;
-    font-size: 14px;
-    padding-left: 10%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #AAA;
-}
-
-.inner-border {
-    margin-left: 12px;
-    background-color: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
 }
 
 /* 햄버거 활성화시 */
